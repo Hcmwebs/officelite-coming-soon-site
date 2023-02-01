@@ -19,12 +19,11 @@ const Form = () => {
 		if (values.email && values.plan && values.phone && values.company) {
 			const newRegister = { ...values, id: new Date().getTime().toString() }
 			setRegisters([...registers, newRegister])
-			console.log(registers);
 			setValues({ email: '', plan: '', phone: '', company: '' })
 		}
 	}
 	return (
-		<div>
+		<>
 			<form onSubmit={handleSubmit}>
 				<div className='form-group'>
 					<label htmlFor='email'>Email : </label>
@@ -77,12 +76,9 @@ const Form = () => {
 					/>
 					<span>Please enter your company name</span>
 				</div>
-				<button  className='submit'>
-					Send
-				</button>
+				<button className='submit'>Send</button>
 			</form>
-
-		</div>
+		</>
 	)
 }
 
