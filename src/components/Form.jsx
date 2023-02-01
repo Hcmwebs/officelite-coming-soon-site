@@ -1,13 +1,10 @@
 import React, { useState } from 'react'
 
-const Form = () => {
-	const [values, setValues] = useState({
-		email: '',
-		plan: '',
-		phone: '',
-		company: '',
-	})
+const initialValues = { email: '', plan: '', phone: '', company: '' }
 
+const Form = () => {
+	const [values, setValues] = useState(initialValues)
+	const [error, setError] = useState('')
 	const [registers, setRegisters] = useState([])
 	const handleChange = (e) => {
 		const name = e.target.name
@@ -16,11 +13,16 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		if (values.email && values.plan && values.phone && values.company) {
-			const newRegister = { ...values, id: new Date().getTime().toString() }
-			setRegisters([...registers, newRegister])
-			setValues({ email: '', plan: '', phone: '', company: '' })
+		for (let name in values) {
+			if (values[name] === '') {
+				setError(`Please provide the ${name}`)
+				return
+			}
 		}
+		setError('')
+		const newRegister = { ...values, id: new Date().getTime().toString() }
+		setRegisters([...registers, newRegister])
+		setValues({ email: '', plan: '', phone: '', company: '' })
 	}
 	return (
 		<>
@@ -36,7 +38,7 @@ const Form = () => {
 						onChange={handleChange}
 						required
 					/>
-					<span>Please enter a valid email address</span>
+					{error && <span>{error}</span>}
 				</div>
 				<div className='form-group'>
 					<label htmlFor='plan'>Plan : </label>
@@ -50,7 +52,7 @@ const Form = () => {
 						<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
 						<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
 					</select>
-					<span>Please choose one option</span>
+					{error && <span>{error}</span>}
 				</div>
 				<div className='form-group'>
 					<label htmlFor='phone'>Phone number :</label>
@@ -62,7 +64,7 @@ const Form = () => {
 						onChange={handleChange}
 						id='phone'
 					/>
-					<span>Please enter a valid phone number</span>
+					{error && <span>{error}</span>}
 				</div>
 				<div className='form-group'>
 					<label htmlFor='company'>Company :</label>
@@ -74,7 +76,7 @@ const Form = () => {
 						onChange={handleChange}
 						id='company'
 					/>
-					<span>Please enter your company name</span>
+					{error && <span>{error}</span>}
 				</div>
 				<button className='submit'>Send</button>
 			</form>
