@@ -1,4 +1,4 @@
-const pricing = [
+export const pricing = [
 	{
 		id: 1,
 		title: 'Basic',
@@ -27,43 +27,3 @@ const pricing = [
 		perks: 'VIP support',
 	},
 ]
-
-const formInputs = [
-	{
-		id: 1,
-		name: 'email',
-		type: 'email',
-		placeholder: 'email@email.com',
-		label: 'Email',
-		select: [
-			{
-				id: 1,
-				name: 'Basic PackFree',
-			},
-			{
-				id: 2,
-				name: 'Pro Pack $9.99',
-			},
-			{
-				id: 3,
-				name: 'Ultimate Pack $19.99',
-			},
-		],
-	},
-	{
-		id: 2,
-		name: 'phoneNumber',
-		type: 'number',
-		placeholder: '+x xxx xxx xxxx',
-		label: 'Phone Number',
-	},
-	{
-		id: 3,
-		name: 'Company',
-		type: 'text',
-		placeholder: 'name of your company',
-		label: 'Company',
-	},
-]
-
-export { pricing, formInputs }
