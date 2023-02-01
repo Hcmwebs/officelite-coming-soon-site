@@ -1,49 +1,87 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 const Form = () => {
-	const [value, setValue] = useState({
+	const [values, setValues] = useState({
 		email: '',
-		select: '',
+		plan: '',
 		phone: '',
 		company: '',
 	})
+
+	const [registers, setRegisters] = useState([])
 	const handleChange = (e) => {
 		const name = e.target.name
 		const value = e.target.value
-		setValue({...value, [name]:value})
-		console.log(name,value)
+		setValues({ ...values, [name]: value })
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
+		if (values.email && values.plan && values.phone && values.company) {
+			const newRegister = { ...values, id: new Date().getTime().toString() }
+			setRegisters([...registers, newRegister])
+			console.log(registers);
+			setValues({ email: '', plan: '', phone: '', company: '' })
+		}
 	}
 	return (
 		<div>
 			<form onSubmit={handleSubmit}>
 				<div className='form-group'>
-					<label htmlFor='email'>Email</label>
-					<input type='email' placeholder= 'email@email.com' name ='email' value={value} onChange = {handleChange} id ='email'/>
+					<label htmlFor='email'>Email : </label>
+					<input
+						type='email'
+						name='email'
+						id='email'
+						value={values.email}
+						placeholder='email.email.com'
+						onChange={handleChange}
+						required
+					/>
 					<span>Please enter a valid email address</span>
 				</div>
 				<div className='form-group'>
-					<label htmlFor='select'>Select</label>
-					<select name='pack' placeholder='Basic pack free'value={value} onChange = {handleChange} id = 'select'>
-						<option>Basic pack free</option>
-						<option>Pro Pack $9.99</option>
-						<option>Ultimate Pack $19.99</option>
+					<label htmlFor='plan'>Plan : </label>
+					<select
+						name='plan'
+						id='plan'
+						placeholder='Basic pack free'
+						value={values.plan}
+						onChange={handleChange}>
+						<option value='Basic pack free'>Basic pack free</option>
+						<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
+						<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
 					</select>
 					<span>Please choose one option</span>
 				</div>
 				<div className='form-group'>
 					<label htmlFor='phone'>Phone number :</label>
-					<input type='number' placeholder='+1234566789' name='phone' value={value} onChange = {handleChange} id='phone'/>
+					<input
+						type='text'
+						placeholder='+1234566789'
+						name='phone'
+						value={values.phone}
+						onChange={handleChange}
+						id='phone'
+					/>
 					<span>Please enter a valid phone number</span>
 				</div>
 				<div className='form-group'>
-					<label htmlFor='company'>Company</label>
-					<input type='text' placeholder='Company name' value={value} onChange = {handleChange} id ='company'/>
+					<label htmlFor='company'>Company :</label>
+					<input
+						name='company'
+						type='text'
+						placeholder='Company name'
+						value={values.company}
+						onChange={handleChange}
+						id='company'
+					/>
 					<span>Please enter your company name</span>
 				</div>
+				<button  className='submit'>
+					Send
+				</button>
 			</form>
+
 		</div>
 	)
 }
