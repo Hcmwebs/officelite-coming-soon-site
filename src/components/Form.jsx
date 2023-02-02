@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const initialValues = { email: '', plan: '', phone: '', company: '' }
 const Form = () => {
 	const [values, setValues] = useState(initialValues)
-	const [error, setError] = useState('')
+	const [error, setError] = useState(false)
 	const [registers, setRegisters] = useState([])
 	const handleChange = (e) => {
 		const name = e.target.name
@@ -13,12 +13,12 @@ const Form = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (values.email && values.pack && values.phone && values.company) {
-			setError('')
+			setError(false)
 			const newRegister = { ...values, id: new Date().getTime().toString() }
 			setRegisters([...registers, newRegister])
 			setValues({ email: '', plan: '', phone: '', company: '' })
 		}
-		setError(`Please ${values[name]} is required!`)
+		setError(true)
 	}
 	return (
 		<>
