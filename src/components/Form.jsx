@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
-import { FormInputs } from './index'
-
-const initialValues = { email: '', plan: '', phone: '', company: '' }
+import styled from 'styled-components'
 const Form = () => {
-	const [values, setValues] = useState(initialValues)
-	const [error, setError] = useState(true)
+	const [values, setValues] = useState({
+		email: '',
+		plan: '',
+		phone: '',
+		company: '',
+	})
+	const [error, setError] = useState(false)
 	const [companies, setCompanies] = useState([])
 
 	const handleChange = (e) => {
@@ -14,72 +17,81 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		// if (values.email && values.pack && values.phone && values.company) {
-		// 	setError(false)
-		// 	const newCompany = { ...values, id: new Date().getTime().toString() }
-		// 	setCompanies([...companies, newCompany])
-		// 	setValues({ email: '', plan: '', phone: '', company: '' })
-		// }
-		// setError(true)
+
+		if (values.email && values.pack && values.phone && values.company) {
+			setError(false)
+			const newCompany = { ...values, id: new Date().getTime().toString() }
+			setCompanies([...companies, newCompany])
+			setValues({ email: '', plan: '', phone: '', company: '' })
+		}
+		setError(true)
 	}
 
-	console.log(values)
 	return (
 		<>
-			<form onSubmit={handleSubmit}>
-				<FormInputs onChange={handleChange} value={values.name} error={error} />
-
-				{/* <div className='form-group'>
+			<StyledForm onSubmit={handleSubmit}>
+				<div className='form-group'>
 					<label htmlFor='email'>Email : </label>
 					<input
 						type='email'
 						name='email'
 						id='email'
 						placeholder='email.email.com'
-						values = {values.name}
+						value={values.email}
 						onChange={handleChange}
 						required
 					/>
-					{error && <span>Please enter a valid email address </span>}
+					{error && (
+						<span className='error'>Please enter a valid email address </span>
+					)}
 				</div>
 				<div className='form-group'>
 					<label htmlFor='pack'>Pack : </label>
-					<select name='pack' id='pack' onChange={handleChange}>
-						required
+					<select
+						name='pack'
+						id='pack'
+						value={values.pack}
+						onChange={handleChange}
+						required>
 						<option value='Basic pack free'>Basic pack Free</option>
 						<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
 						<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
 					</select>
-					{error && <span>Please select one of the options</span>}
+					{error && (
+						<span className='error'>Please select one of the options</span>
+					)}
 				</div>
 				<div className='form-group'>
 					<label htmlFor='phone'>Phone number :</label>
 					<input
 						type='text'
-						placeholder='+1234566789'
+						id='phone'
 						name='phone'
-						values = {values.name}
+						placeholder='+1234566789'
+						value={values.phone}
 						onChange={handleChange}
 						required
-						id='phone'
 					/>
-					{error && <span>Please enter a valid phone number</span>}
+					{error && (
+						<span className='error'>Please enter a valid phone number</span>
+					)}
 				</div>
 				<div className='form-group'>
 					<label htmlFor='company'>Company :</label>
 					<input
 						name='company'
+						id='company'
 						type='text'
 						placeholder='Company name'
-						values = {values.name}
+						value={values.company}
 						onChange={handleChange}
 						required
-						id='company'
 					/>
-					{error && <span>Please enter a company name</span>}
-				</div> */}
+					{error && <span className='error'>Please enter a company name</span>}
+				</div>
+
 				<button className='submit'>Send</button>
-			</form>
+			</StyledForm>
 			<div>
 				{companies.map((newCompany) => {
 					const { id, company, phone, pack, email } = newCompany
@@ -96,5 +108,16 @@ const Form = () => {
 		</>
 	)
 }
+
+const StyledForm = styled.form`
+	input[invalid] ~ span {
+		display: block;
+	}
+	span {
+		color: red;
+		font-size: 12px;
+		display: none;
+	}
+`
 
 export default Form
