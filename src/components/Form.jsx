@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
+// import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
+import { FormInputs } from './index'
+const initialState = { email: '', plan: '', phone: '', company: '' }
 const Form = () => {
-	const [values, setValues] = useState({
-		email: '',
-		plan: '',
-		phone: '',
-		company: '',
-	})
+	// const navigate = useNavigate()
+	const [values, setValues] = useState(initialState)
 	const [error, setError] = useState(false)
 	const [companies, setCompanies] = useState([])
 
@@ -22,15 +21,23 @@ const Form = () => {
 			setError(false)
 			const newCompany = { ...values, id: new Date().getTime().toString() }
 			setCompanies([...companies, newCompany])
-			setValues({ email: '', plan: '', phone: '', company: '' })
+			Form.reset()
+
+			// setTimeout(() => {
+			// 	setValues(initialState)
+			// 	navigate('/')
+			// }, 5000)
 		}
+
 		setError(true)
 	}
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<div className='form-group'>
+				<FormInputs handleChange={handleChange} values={values} error={error} />
+
+				{/* <div className='form-group'>
 					<label htmlFor='email'>Email : </label>
 					<input
 						type='email'
@@ -88,7 +95,7 @@ const Form = () => {
 						required
 					/>
 					{error && <span className='error'>Please enter a company name</span>}
-				</div>
+				</div> */}
 
 				<button className='submit'>Send</button>
 			</StyledForm>
@@ -110,13 +117,55 @@ const Form = () => {
 }
 
 const StyledForm = styled.form`
-	input[invalid] ~ span {
+	width: min(100%, 300px);
+	box-sizing: border-box;
+	padding: 30px 40px;
+	background-color: salmon;
+	border-radius: 10px;
+	display: grid;
+	gap: 10px;
+	margin: 0 auto;
+	.form-group {
+		display: grid;
+		gap: 5px;
+	}
+	label {
+		font-size: 12px;
+		color: #f4fff4;
+	}
+	input,
+	select {
+		padding: 10px;
+		margin: 10px 0;
+		border: 2px solid #f4fff4;
+		border-radius: 5px;
+		outline: none;
+	}
+	input:invalid[focused='true'] {
+		border: 3px solid red;
+	}
+	input:invalid[focused='true'] ~ .error {
 		display: block;
 	}
-	span {
-		color: red;
+	.error {
 		font-size: 12px;
+		padding: 3px;
+		color: black;
 		display: none;
+	}
+
+	.submit {
+		width: 100%;
+		font-size: 18px;
+		margin-top: 15px;
+		margin-bottom: 30px;
+		padding: 12px 24px;
+		color: #fff;
+		background-color: #f46c5d;
+		border: 1px solid #fff;
+		outline: none;
+		border-radius: 5px;
+		cursor: pointer;
 	}
 `
 
