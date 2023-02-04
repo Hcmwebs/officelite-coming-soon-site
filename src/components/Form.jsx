@@ -2,10 +2,15 @@ import React, { useState } from 'react'
 // import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { FormInputs } from './index'
-const initialState = { email: '', plan: '', phone: '', company: '' }
+
 const Form = () => {
 	// const navigate = useNavigate()
-	const [values, setValues] = useState(initialState)
+	const [values, setValues] = useState({
+		email: '',
+		pack: '',
+		phone: '',
+		company: '',
+	})
 	const [error, setError] = useState(false)
 	const [companies, setCompanies] = useState([])
 
@@ -16,88 +21,27 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-
-		if (values.email && values.pack && values.phone && values.company) {
-			setError(false)
-			const newCompany = { ...values, id: new Date().getTime().toString() }
-			setCompanies([...companies, newCompany])
-			Form.reset()
-
-			// setTimeout(() => {
-			// 	setValues(initialState)
-			// 	navigate('/')
-			// }, 5000)
+		if (!values.email && !values.pack && !values.phone && !values.company) {
+			setError(true)
 		}
+		setError(false)
+		const myNewCompany = { ...values, id: new Date().getTime().toString() }
+		setCompanies([...companies, myNewCompany])
+		setValues({ email: '', pack: '', phone: '', company: '' })
 
-		setError(true)
+		// setTimeout(() => {
+		// 	setValues(initialState)
+		// 	navigate('/')
+		// }, 5000)
 	}
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
 				<FormInputs handleChange={handleChange} values={values} error={error} />
-
-				{/* <div className='form-group'>
-					<label htmlFor='email'>Email : </label>
-					<input
-						type='email'
-						name='email'
-						id='email'
-						placeholder='email.email.com'
-						value={values.email}
-						onChange={handleChange}
-						required
-					/>
-					{error && (
-						<span className='error'>Please enter a valid email address </span>
-					)}
-				</div>
-				<div className='form-group'>
-					<label htmlFor='pack'>Pack : </label>
-					<select
-						name='pack'
-						id='pack'
-						value={values.pack}
-						onChange={handleChange}
-						required>
-						<option value='Basic pack free'>Basic pack Free</option>
-						<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
-						<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
-					</select>
-					{error && (
-						<span className='error'>Please select one of the options</span>
-					)}
-				</div>
-				<div className='form-group'>
-					<label htmlFor='phone'>Phone number :</label>
-					<input
-						type='text'
-						id='phone'
-						name='phone'
-						placeholder='+1234566789'
-						value={values.phone}
-						onChange={handleChange}
-						required
-					/>
-					{error && (
-						<span className='error'>Please enter a valid phone number</span>
-					)}
-				</div>
-				<div className='form-group'>
-					<label htmlFor='company'>Company :</label>
-					<input
-						name='company'
-						id='company'
-						type='text'
-						placeholder='Company name'
-						value={values.company}
-						onChange={handleChange}
-						required
-					/>
-					{error && <span className='error'>Please enter a company name</span>}
-				</div> */}
-
-				<button className='submit'>Send</button>
+				<button className='submit' type='submit'>
+					Send
+				</button>
 			</StyledForm>
 			<div>
 				{companies.map((newCompany) => {

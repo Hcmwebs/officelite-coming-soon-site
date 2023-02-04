@@ -11,9 +11,9 @@ const FormInputs = ({ values, handleChange, error }) => {
 			<div className='form-group'>
 				<label htmlFor='email'>Email : </label>
 				<input
-					type='email'
-					name='email'
 					id='email'
+					name='email'
+					type='email'
 					placeholder='email.email.com'
 					value={values.name}
 					onChange={handleChange}
@@ -28,8 +28,8 @@ const FormInputs = ({ values, handleChange, error }) => {
 			<div className='form-group'>
 				<label htmlFor='pack'>Pack : </label>
 				<select
-					name='pack'
 					id='pack'
+					name='pack'
 					value={values.name}
 					onChange={handleChange}
 					onBlur={handleFocus}
@@ -64,6 +64,7 @@ const FormInputs = ({ values, handleChange, error }) => {
 			<div className='form-group'>
 				<label htmlFor='company'>Company :</label>
 				<input
+					id='company'
 					name='company'
 					type='text'
 					placeholder='Company name'
@@ -73,7 +74,6 @@ const FormInputs = ({ values, handleChange, error }) => {
 					focused={focused.toString()}
 					onFocus={handleFocus}
 					required
-					id='company'
 				/>
 				{!error && <span className='error'>Please enter a company name</span>}
 			</div>
