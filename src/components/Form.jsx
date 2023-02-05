@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
-// import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 import { FormInputs } from './index'
 
 const Form = () => {
-	// const navigate = useNavigate()
 	const [values, setValues] = useState({
 		email: '',
 		pack: '',
 		phone: '',
 		company: '',
 	})
-	const [error, setError] = useState(false)
+
 	const [companies, setCompanies] = useState([])
 
 	const handleChange = (e) => {
@@ -21,24 +19,21 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		if (!values.email && !values.pack && !values.phone && !values.company) {
-			setError(true)
-		}
-		setError(false)
-		const myNewCompany = { ...values, id: new Date().getTime().toString() }
-		setCompanies([...companies, myNewCompany])
-		setValues({ email: '', pack: '', phone: '', company: '' })
 
-		// setTimeout(() => {
-		// 	setValues(initialState)
-		// 	navigate('/')
-		// }, 5000)
+		if (values.email && values.pack && values.phone && values.company) {
+			const myNewCompany = { ...values, id: new Date().getTime().toString() }
+			setCompanies([...companies, myNewCompany])
+			console.log(values)
+			setValues({ email: '', pack: '', phone: '', company: '' })
+			console.log(values)
+		}
+		// setError(false)
 	}
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<FormInputs handleChange={handleChange} values={values} error={error} />
+				<FormInputs handleChange={handleChange} values={values} />
 				<button className='submit' type='submit'>
 					Send
 				</button>
@@ -85,10 +80,12 @@ const StyledForm = styled.form`
 		border-radius: 5px;
 		outline: none;
 	}
-	input:invalid[focused='true'] {
+	input:invalid[focused='true'],
+	select:invalid[focused='true'] {
 		border: 3px solid red;
 	}
-	input:invalid[focused='true'] ~ .error {
+	input:invalid[focused='true'] ~ .error,
+	select:invalid[focused='true'] ~ .error {
 		display: block;
 	}
 	.error {
