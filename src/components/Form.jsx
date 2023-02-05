@@ -9,7 +9,6 @@ const Form = () => {
 		phone: '',
 		company: '',
 	})
-
 	const [companies, setCompanies] = useState([])
 
 	const handleChange = (e) => {
@@ -19,15 +18,11 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-
 		if (values.email && values.pack && values.phone && values.company) {
 			const myNewCompany = { ...values, id: new Date().getTime().toString() }
 			setCompanies([...companies, myNewCompany])
-			console.log(values)
 			setValues({ email: '', pack: '', phone: '', company: '' })
-			console.log(values)
 		}
-		// setError(false)
 	}
 
 	return (
