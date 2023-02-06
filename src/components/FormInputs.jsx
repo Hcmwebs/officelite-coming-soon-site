@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 
-const FormInputs = ({ values, handleChange }) => {
-	const [focused, setFocused] = useState(false)
-
-	const handleFocus = (e) => {
-		setFocused(true)
-	}
+const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 	return (
 		<>
 			<div className='form-group'>
@@ -21,8 +16,11 @@ const FormInputs = ({ values, handleChange }) => {
 					focused={focused.toString()}
 					required
 				/>
-				<span className='error'>Please enter a valid email address </span>
+				{error && (
+					<span className='error'>Please enter a valid email address </span>
+				)}
 			</div>
+
 			<div className='form-group'>
 				<label htmlFor='pack'>Pack : </label>
 				<select
@@ -37,8 +35,11 @@ const FormInputs = ({ values, handleChange }) => {
 					<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
 					<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
 				</select>
-				<span className='error'>Please select one of the options</span>
+				{error && (
+					<span className='error'>Please select one of the options</span>
+				)}
 			</div>
+
 			<div className='form-group'>
 				<label htmlFor='phone'>Phone number :</label>
 				<input
@@ -53,9 +54,11 @@ const FormInputs = ({ values, handleChange }) => {
 					pattern='^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
 					required
 				/>
-
-				<span className='error'>Please enter a valid phone number</span>
+				{error && (
+					<span className='error'>Please enter a valid phone number</span>
+				)}
 			</div>
+
 			<div className='form-group'>
 				<label htmlFor='company'>Company :</label>
 				<input
@@ -70,7 +73,7 @@ const FormInputs = ({ values, handleChange }) => {
 					onFocus={handleFocus}
 					required
 				/>
-				<span className='error'>Please enter a company name</span>
+				{error && <span className='error'>Please enter a company name</span>}
 			</div>
 		</>
 	)

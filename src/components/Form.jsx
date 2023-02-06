@@ -10,6 +10,12 @@ const Form = () => {
 		company: '',
 	})
 	const [companies, setCompanies] = useState([])
+	const [error, setError] = useState(false)
+	const [focused, setFocused] = useState(false)
+
+	const handleFocus = (e) => {
+		setFocused(true)
+	}
 
 	const handleChange = (e) => {
 		const name = e.target.name
@@ -19,16 +25,28 @@ const Form = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (values.email && values.pack && values.phone && values.company) {
-			const myNewCompany = { ...values, id: new Date().getTime().toString() }
-			setCompanies([...companies, myNewCompany])
+			setError(false)
+			const newCompany = { ...values, id: new Date().getTime().toString() }
+			setCompanies([...companies, newCompany])
 			setValues({ email: '', pack: '', phone: '', company: '' })
+		} else {
+			setError(true)
 		}
+		setError(false)
+		setFocused(false)
+		e.target.reset()
 	}
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<FormInputs handleChange={handleChange} values={values} />
+				<FormInputs
+					handleChange={handleChange}
+					values={values}
+					error={error}
+					focused={focused}
+					handleFocus={handleFocus}
+				/>
 				<button className='submit' type='submit'>
 					Send
 				</button>
