@@ -28,13 +28,18 @@ const Form = () => {
 			setError(false)
 			const newCompany = { ...values, id: new Date().getTime().toString() }
 			setCompanies([...companies, newCompany])
-			setValues({ email: '', pack: '', phone: '', company: '' })
+			setValues({...values, email: '', pack: '', phone: '', company: '' })
 		} else {
 			setError(true)
 		}
-		setError(false)
 		setFocused(false)
+		setError(false)
 		e.target.reset()
+
+		setTimeout(() => {
+		}, 3000)
+
+
 	}
 
 	return (

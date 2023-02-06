@@ -31,6 +31,7 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 					onBlur={handleFocus}
 					focused={focused.toString()}
 					required>
+					<option value='Select pack'>Select Pack</option>
 					<option value='Basic pack free'>Basic pack Free</option>
 					<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
 					<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
