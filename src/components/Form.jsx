@@ -28,7 +28,12 @@ const Form = () => {
 			setError(false)
 			const newCompany = { ...values, id: new Date().getTime().toString() }
 			setCompanies([...companies, newCompany])
-			setValues({...values, email: '', pack: '', phone: '', company: '' })
+			setValues({
+				email: '',
+				pack: '',
+				phone: '',
+				company: '',
+			})
 		} else {
 			setError(true)
 		}
@@ -36,10 +41,7 @@ const Form = () => {
 		setError(false)
 		e.target.reset()
 
-		setTimeout(() => {
-		}, 3000)
-
-
+		setTimeout(() => {}, 3000)
 	}
 
 	return (
