@@ -2,13 +2,15 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FormInputs } from './index'
 
+const initialState = {
+	email: '',
+	pack: '',
+	phone: '',
+	company: '',
+}
+
 const Form = () => {
-	const [values, setValues] = useState({
-		email: '',
-		pack: '',
-		phone: '',
-		company: '',
-	})
+	const [values, setValues] = useState(initialState)
 	const [companies, setCompanies] = useState([])
 	const [error, setError] = useState(false)
 	const [focused, setFocused] = useState(false)
@@ -28,20 +30,11 @@ const Form = () => {
 			setError(false)
 			const newCompany = { ...values, id: new Date().getTime().toString() }
 			setCompanies([...companies, newCompany])
-			setValues({
-				email: '',
-				pack: '',
-				phone: '',
-				company: '',
-			})
-		} else {
-			setError(true)
+			setValues(initialState)
 		}
-		setFocused(false)
-		setError(false)
-		e.target.reset()
 
-		setTimeout(() => {}, 3000)
+		setError(false)
+		setFocused(false)
 	}
 
 	return (

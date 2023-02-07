@@ -10,13 +10,13 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 					name='email'
 					type='email'
 					placeholder='email.email.com'
-					value={values.name}
+					value={values.email}
 					onChange={handleChange}
 					onBlur={handleFocus}
 					focused={focused.toString()}
 					required
 				/>
-				{error && (
+				{!error && (
 					<span className='error'>Please enter a valid email address </span>
 				)}
 			</div>
@@ -26,7 +26,7 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 				<select
 					id='pack'
 					name='pack'
-					value={values.name}
+					value={values.pack}
 					onChange={handleChange}
 					onBlur={handleFocus}
 					focused={focused.toString()}
@@ -36,7 +36,7 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 					<option value='Pro Pack $9.99'>Pro Pack $9.99</option>
 					<option value='Ultimate Pack $19.99'>Ultimate Pack $19.99</option>
 				</select>
-				{error && (
+				{!error && (
 					<span className='error'>Please select one of the options</span>
 				)}
 			</div>
@@ -48,14 +48,14 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 					name='phone'
 					type='text'
 					placeholder='+1234566789'
-					value={values.name}
+					value={values.phone}
 					onChange={handleChange}
 					onBlur={handleFocus}
 					focused={focused.toString()}
 					pattern='^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$'
 					required
 				/>
-				{error && (
+				{!error && (
 					<span className='error'>Please enter a valid phone number</span>
 				)}
 			</div>
@@ -67,14 +67,14 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 					name='company'
 					type='text'
 					placeholder='Company name'
-					value={values.name}
+					value={values.company}
 					onChange={handleChange}
 					onBlur={handleFocus}
 					focused={focused.toString()}
 					onFocus={handleFocus}
 					required
 				/>
-				{error && <span className='error'>Please enter a company name</span>}
+				{!error && <span className='error'>Please enter a company name</span>}
 			</div>
 		</>
 	)
