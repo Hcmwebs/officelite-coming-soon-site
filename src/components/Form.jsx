@@ -4,7 +4,7 @@ import { FormInputs } from './index'
 
 const initialState = {
 	email: '',
-	pack: '',
+	pack: 'Select pack',
 	phone: '',
 	company: '',
 }
