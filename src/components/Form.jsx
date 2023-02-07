@@ -35,6 +35,7 @@ const Form = () => {
 
 		setError(false)
 		setFocused(false)
+		
 	}
 
 	return (
