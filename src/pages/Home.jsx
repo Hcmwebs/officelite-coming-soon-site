@@ -8,7 +8,7 @@ const Home = () => {
 		<div>
 			<h1>Welcome Home</h1>
 			<Timer duration={timerDuration} />
-			<Link to='SignUp'>Let's get Started!</Link>
+			<Link to='signup'>Let's get Started!</Link>
 		</div>
 	)
 }
