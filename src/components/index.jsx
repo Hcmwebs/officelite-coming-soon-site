@@ -1,5 +1,6 @@
+import Navbar from './Navbar'
 import Timer from './Timer'
 import Form from './Form'
 import FormInputs from './FormInputs'
 
-export { Timer, Form , FormInputs }
+export { Navbar, Timer, Form, FormInputs }

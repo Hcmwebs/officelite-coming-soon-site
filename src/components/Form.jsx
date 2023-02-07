@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { FormInputs } from './index'
+import { useNavigate } from 'react-router-dom'
+
 
 const initialState = {
 	email: '',
@@ -14,6 +16,8 @@ const Form = () => {
 	const [companies, setCompanies] = useState([])
 	const [error, setError] = useState(false)
 	const [focused, setFocused] = useState(false)
+	
+	const navigate = useNavigate()
 
 	const handleFocus = (e) => {
 		setFocused(true)
@@ -26,16 +30,18 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		if (values.email && values.pack && values.phone && values.company) {
-			setError(false)
-			const newCompany = { ...values, id: new Date().getTime().toString() }
-			setCompanies([...companies, newCompany])
-			setValues(initialState)
-		}
+		if (!values.email && !values.pack && !values.phone && !values.company)
+			return
 
 		setError(false)
+		const newCompany = { ...values, id: new Date().getTime().toString() }
+		setCompanies([...companies, newCompany])
+		setValues(initialState)
 		setFocused(false)
-		
+
+		setTimeout(() =>{
+			navigate('/')
+		}, 5000)
 	}
 
 	return (
