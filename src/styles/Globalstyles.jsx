@@ -20,6 +20,9 @@ body {
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
 }
 
 p {margin: 0;}

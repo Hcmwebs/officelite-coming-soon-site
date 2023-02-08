@@ -48,14 +48,13 @@ const Wrapper = styled.div`
 	gap: 0.5rem;
 
 	.timer {
-		font-size:18px;
-		width: 50px;
-		height: 50px;
-		padding: 0.5rem;
-		font-weight:bold;
+		font-size: 18px;
+		width: min(100px, 100%);
+		padding: 0.5rem 1rem;
+		font-weight: bold;
 		display: grid;
 		place-items: center;
-		box-shadow: 0px 2px 20px 2px rgba(0, 0, 0, 0.3);
+		box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, 0.2);
 		border: none;
 		border-radius: 0.2rem;
 
