@@ -14,9 +14,7 @@ const Timer = ({ duration }) => {
 		let hrs = parseInt(totalHours % 24)
 
 		return (
-			<div
-				className='timer'
-				style={{ display: 'flex', gap: 10, marginBottom: 24 }}>
+			<Wrapper className='timer'>
 				<div>
 					{days} <span> days</span>
 				</div>
@@ -32,7 +30,7 @@ const Timer = ({ duration }) => {
 				<div>
 					{secs} <span>secs</span>
 				</div>
-			</div>
+			</Wrapper>
 		)
 	}
 
@@ -44,16 +42,14 @@ const Timer = ({ duration }) => {
 	return <div>{getFormattedTime(time)}</div>
 }
 const Wrapper = styled.div`
-display: grid;
-place-items: center;
-padding-block: 1.5rem;
+	display: grid;
+	place-items: center;
+	padding-block: 1.5rem;
 
-.timer{
-	display: flex;
-	gap: 10px;
-
-}
-
+	.timer {
+		display: flex;
+		gap: 10px;
+	}
 `
 
 export default Timer
