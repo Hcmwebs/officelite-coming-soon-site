@@ -14,23 +14,26 @@ const Timer = ({ duration }) => {
 		let hrs = parseInt(totalHours % 24)
 
 		return (
-			<Wrapper>
-				<div className='timer'>
-					{days} <span> days</span>
-				</div>
-				:
-				<div className='timer'>
-					{hrs} <span>hours</span>
-				</div>
-				:
-				<div className='timer'>
-					{mins} <span>mins</span>
-				</div>
-				:
-				<div className='timer'>
-					{secs} <span>secs</span>
-				</div>
-			</Wrapper>
+			<>
+			<div><h3>Dynamic date goes here</h3></div>
+				<Wrapper>
+					<div className='timer'>
+						{days} <span> days</span>
+					</div>
+					:
+					<div className='timer'>
+						{hrs} <span>hours</span>
+					</div>
+					:
+					<div className='timer'>
+						{mins} <span>mins</span>
+					</div>
+					:
+					<div className='timer'>
+						{secs} <span>secs</span>
+					</div>
+				</Wrapper>
+			</>
 		)
 	}
 
