@@ -1,11 +1,14 @@
 import React from 'react'
-import { Navbar } from './index'
 
 const Header = () => {
 	return (
 		<>
-			<Navbar />
-			<div>Hero section go here</div>
+			<div>
+				<img src='/illustration-home-charts.svg' alt='illustration Chart' />
+				<div className='heroBody'>
+					<h1>  A simple solution to complex tasks is coming soon</h1>
+				</div>
+			</div>
 		</>
 	)
 }
