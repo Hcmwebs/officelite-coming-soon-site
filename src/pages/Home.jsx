@@ -6,6 +6,7 @@ import { timerDuration } from '../data/Data'
 const Home = () => {
 	return (
 		<div>
+			<Header />
 			<MainContent />
 
 			{/* <h1>Welcome Home</h1>
