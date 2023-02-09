@@ -2,6 +2,25 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 
+:root{
+  --blue: rgba(81, 117, 255,1.0);
+  --lightBlue: rgba(130,156,255,1.0);
+  --black: rgba(37,41,58,1.0);
+  --lightBlack: rgba(51,57,80,1.0);
+  --grey:rgba(116,123,149,1.0);
+  --red: rgba(240,91,91,1.0);
+  --padding:0.625rem;
+  --margin:0.625rem;
+  --borderRadius:0.2px;
+  --boxShadow-1: 0px 2px 15px 2px rgba(0, 0, 0, 0.2);
+  --boxShadow-2: 0px 2px 15px 2px rgba(0, 0, 0, 0.4);
+  --transition-1: all 0.3s ease-in-out;
+  --transition-2: all 0.6s ease-in-out;
+  --transition-3: all 0.9s ease-in-out;
+
+
+}
+
 *, *::before, *::after{
   padding: 0;
 	margin: 0;
