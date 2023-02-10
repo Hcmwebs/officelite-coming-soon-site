@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
 
 :root{
-  --blue: rgba(81, 117, 255,1.0);
+  --white: rgba(255, 255, 255, 1.0);
+  --blue: rgba(81, 117, 255, 1.0);
   --lightBlue: rgba(130,156,255,1.0);
   --black: rgba(37,41,58,1.0);
   --lightBlack: rgba(51,57,80,1.0);
