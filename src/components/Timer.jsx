@@ -53,9 +53,13 @@ const Timer = ({ duration }) => {
 	return <div>{getFormattedTime(time)}</div>
 }
 const Wrapper = styled.div`
+width: max-content;
+margin: 0 auto;
 	display: grid;
 	place-items: center;
 	gap: 1.5rem;
+	background-color: var(--white);
+
 	.clockTitle {
 		text-align: center;
 	}
