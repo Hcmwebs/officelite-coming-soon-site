@@ -3,6 +3,10 @@ import styled from 'styled-components'
 
 const Timer = ({ duration }) => {
 	const [time, setTime] = useState(duration)
+	let localDate = new Date()
+	let startDate = new Date(
+		localDate.setDate(localDate.getDate() + 30)
+	).toDateString()
 	const getFormattedTime = (milliseconds) => {
 		let totalSeconds = parseInt(Math.floor(milliseconds / 1000))
 		let totalMinutes = parseInt(Math.floor(totalSeconds / 60))
@@ -15,22 +19,26 @@ const Timer = ({ duration }) => {
 
 		return (
 			<>
-			<div><h3>Dynamic date goes here</h3></div>
 				<Wrapper>
-					<div className='timer'>
-						{days} <span> days</span>
+					<div className='clockTitle'>
+						<h3>Coming on {startDate}</h3>
 					</div>
-					:
-					<div className='timer'>
-						{hrs} <span>hours</span>
-					</div>
-					:
-					<div className='timer'>
-						{mins} <span>mins</span>
-					</div>
-					:
-					<div className='timer'>
-						{secs} <span>secs</span>
+					<div className='clock'>
+						<div className='timer'>
+							{days} <span> days</span>
+						</div>
+						:
+						<div className='timer'>
+							{hrs} <span>hours</span>
+						</div>
+						:
+						<div className='timer'>
+							{mins} <span>mins</span>
+						</div>
+						:
+						<div className='timer'>
+							{secs} <span>secs</span>
+						</div>
 					</div>
 				</Wrapper>
 			</>
@@ -45,10 +53,19 @@ const Timer = ({ duration }) => {
 	return <div>{getFormattedTime(time)}</div>
 }
 const Wrapper = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 0.5rem;
+	display: grid;
+	place-items: center;
+	gap: 1.5rem;
+	.clockTitle {
+		text-align: center;
+	}
+	.clock {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5rem;
+		margin-bottom: 1.5rem; // set as a gap and remove the margin;
+	}
 
 	.timer {
 		font-size: 18px;
