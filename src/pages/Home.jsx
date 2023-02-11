@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { Header, MainContent, Footer } from '../components'
+import { StyledContainer } from '../styles'
 
 const Home = () => {
 	return (
-		<div>
+		<StyledContainer>
 			<Header />
 			<MainContent />
 			<Footer />
-		</div>
+		</StyledContainer>
 	)
 }
 
