@@ -3,7 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyles = createGlobalStyle`
 
 :root{
-  --white: rgba(255, 255, 255, 1.0);
+  --white-1: rgba(255, 255, 255, 1.0);
+  --white-2:rgba(242, 242, 242, 1.0);
+  --white-3:rgba(250, 250, 250, 1.0);
   --blue: rgba(81, 117, 255, 1.0);
   --lightBlue: rgba(130,156,255,1.0);
   --black: rgba(37,41,58,1.0);
@@ -35,7 +37,7 @@ height: 100%;
 }
 
 body {
-  background: white;
+  background: var(--white-2);
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   line-height: 1.75;
