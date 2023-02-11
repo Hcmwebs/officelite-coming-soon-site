@@ -1,3 +1,4 @@
 import GlobalStyles from './GlobalStyles';
+import StyledContainer from './StyledContainer';
 
-export {GlobalStyles}
+export {GlobalStyles, StyledContainer}
