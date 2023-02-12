@@ -82,8 +82,8 @@ a{
 .btn{
   padding: 0.75rem 1.5rem;
   border: 1px solid var(--white-2);
-  display: grid;
-  
+  display: inline-block;
+
   &.primary{
     background-color:var(--blue);
     color:var(--white-2);
