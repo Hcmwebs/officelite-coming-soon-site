@@ -79,6 +79,19 @@ a{
   text-decoration: none;
 }
 
+.btn{
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--white-2);
+  display: grid;
+  
+  &.primary{
+    background-color:var(--blue);
+    color:var(--white-2);
+  }
+
+
+}
+
 `
 
 export default GlobalStyles

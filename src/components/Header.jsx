@@ -7,7 +7,6 @@ const Header = () => {
 	const { title, body } = homeHero
 	return (
 		<>
-			{' '}
 			<Navbar />
 			<div>
 				<img src='/illustration-home-charts.svg' alt='illustration Chart' />
@@ -15,7 +14,9 @@ const Header = () => {
 					<h1>{title}</h1>
 					<p>{body}</p>
 				</div>
-				<Link to='/signup'>Get Started</Link>
+				<Link to='/signup' className='btn primary'>
+					Get Started
+				</Link>
 			</div>
 		</>
 	)
