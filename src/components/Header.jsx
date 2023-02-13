@@ -1,24 +1,15 @@
 import React from 'react'
-import { homeHero } from '../data/Data'
-import { Link } from 'react-router-dom'
-import { Navbar } from './index'
+
+import { Hero, Navbar } from './index'
+import { StyledHeader } from '../styles'
 
 const Header = () => {
-	const { title, body } = homeHero
+
 	return (
-		<>
+		<StyledHeader>
 			<Navbar />
-			<div>
-				<img src='/illustration-home-charts.svg' alt='illustration Chart' />
-				<div className='heroBody'>
-					<h1>{title}</h1>
-					<p>{body}</p>
-				</div>
-				<Link to='/signup' className='btn primary'>
-					Get Started
-				</Link>
-			</div>
-		</>
+			<Hero />
+		</StyledHeader>
 	)
 }
 

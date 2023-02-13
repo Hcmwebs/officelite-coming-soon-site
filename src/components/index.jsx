@@ -6,5 +6,6 @@ import Header from './Header'
 import MainContent from './MainContent'
 import Footer from './Footer'
 import Logo from './Logo'
+import Hero from './Hero'
 
-export { Header, Navbar, Logo, MainContent, Footer, Timer, Form, FormInputs }
+export { Header, Navbar, Logo,Hero, MainContent, Footer, Timer, Form, FormInputs }
