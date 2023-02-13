@@ -82,10 +82,10 @@ a{
 }
 
 .btn{
-  padding-inline:0.75rem 1.5rem;
+  padding:0.75rem 3.5rem;
   border: 1px solid var(--white-2);
-  display: inline-block;
   border-radius: 1.75rem;
+  display: inline-block;
   transition: var(--transition-2);
 
   &.primary{
