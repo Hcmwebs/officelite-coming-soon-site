@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
   --transition-1: all 0.3s ease-in-out;
   --transition-2: all 0.6s ease-in-out;
   --transition-3: all 0.9s ease-in-out;
+  --bold: 700;
+  --regular: 400;
 
 
 }
@@ -44,6 +46,7 @@ body {
   color: #000000;
   display: grid;
   place-items: center;
+  width: 100vw;
   min-height: 100vh;
 }
 
