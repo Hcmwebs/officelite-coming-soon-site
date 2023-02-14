@@ -6,6 +6,7 @@ import StyledHero from './StyledHero'
 import StyledButton from './StyledButton'
 import StyledFooter from './StyledFooter'
 import StyledMainContent from './StyledMainContent'
+import StyledSection from './StyledSection'
 export {
 	GlobalStyles,
 	StyledLogo,
@@ -14,5 +15,6 @@ export {
 	StyledHero,
 	StyledButton,
   StyledMainContent,
+  StyledSection,
 	StyledFooter,
 }
