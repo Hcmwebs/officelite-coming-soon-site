@@ -4,6 +4,7 @@ import StyledContainer from './StyledContainer'
 import StyledHeader from './StyledHeader'
 import StyledHero from './StyledHero'
 import StyledButton from './StyledButton'
+import StyledFooter from './StyledFooter'
 
 export {
 	GlobalStyles,
@@ -12,4 +13,5 @@ export {
 	StyledHeader,
 	StyledHero,
 	StyledButton,
+	StyledFooter,
 }
