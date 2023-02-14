@@ -15,9 +15,11 @@ const Hero = () => {
 			<div className='heroBody'>
 				<h1>{title}</h1>
 				<p>{body}</p>
-				<Link to='/signup' className='btn primary'>
-					Get Started
-				</Link>
+				<div>
+					<Link to='/signup' className='btn primary'>
+						Get Started
+					</Link>
+				</div>
 			</div>
 		</StyledHero>
 	)
