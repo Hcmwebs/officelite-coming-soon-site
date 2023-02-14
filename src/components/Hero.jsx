@@ -15,11 +15,9 @@ const Hero = () => {
 			<div className='heroBody'>
 				<h1>{title}</h1>
 				<p>{body}</p>
-				<div>
-					<Link to='/signup' className='btn primary'>
-						Get Started
-					</Link>
-				</div>
+				<Link to='/signup' className='btn primary'>
+					Get Started
+				</Link>
 			</div>
 		</StyledHero>
 	)
