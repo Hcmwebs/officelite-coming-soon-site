@@ -7,5 +7,17 @@ import MainContent from './MainContent'
 import Footer from './Footer'
 import Logo from './Logo'
 import Hero from './Hero'
+import Button from './Button'
 
-export { Header, Navbar, Logo,Hero, MainContent, Footer, Timer, Form, FormInputs }
+export {
+	Header,
+	Navbar,
+	Logo,
+	Hero,
+	Button,
+	MainContent,
+	Footer,
+	Timer,
+	Form,
+	FormInputs,
+}
