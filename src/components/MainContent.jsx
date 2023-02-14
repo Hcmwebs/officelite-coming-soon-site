@@ -1,14 +1,14 @@
 import React from 'react'
-import { StyledContainer } from '../styles'
+import { StyledContainer, StyledMainContent } from '../styles'
 
 const MainContent = () => {
 	return (
 		<StyledContainer>
-			<main>
+			<StyledMainContent>
 				<section className='cards'>
 					<div>Price card components go here</div>
 				</section>
-			</main>
+			</StyledMainContent>
 		</StyledContainer>
 	)
 }
