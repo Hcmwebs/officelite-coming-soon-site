@@ -7,7 +7,7 @@ const StyledContainer = styled.div`
 	place-items: center;
 	position: relative;
 	background-color: ${({ header }) =>
-		header ? 'var(--white-1)' : 'var(--black)'};
+		header ? 'var(--white-3)' : 'var(--black)'};
 `
 
 export default StyledContainer
