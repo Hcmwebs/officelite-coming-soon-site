@@ -1,12 +1,14 @@
 import React from 'react'
 
 import { Hero } from './index'
-import { StyledHeader } from '../styles'
+import { StyledContainer, StyledHeader } from '../styles'
 
 const Header = () => {
 	return (
 		<StyledHeader>
-			<Hero />
+			<StyledContainer header>
+				<Hero />
+			</StyledContainer>
 		</StyledHeader>
 	)
 }
