@@ -21,6 +21,13 @@ const StyledHero = styled.div`
 			line-height: 3rem;
 			text-align: center;
 		}
+		p {
+			font-size: 16px;
+			font-weight: var(--regular);
+			line-height: 1.625rem;
+			text-align: center;
+			color: var(--grey);
+		}
 	}
 `
 
