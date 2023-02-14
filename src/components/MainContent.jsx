@@ -1,13 +1,15 @@
 import React from 'react'
+import { StyledContainer } from '../styles'
 
 const MainContent = () => {
 	return (
-		
-		<main>
-			<section className='cards'>
-				<div>Price card components go here</div>
-			</section>
-		</main>
+		<StyledContainer>
+			<main>
+				<section className='cards'>
+					<div>Price card components go here</div>
+				</section>
+			</main>
+		</StyledContainer>
 	)
 }
 
