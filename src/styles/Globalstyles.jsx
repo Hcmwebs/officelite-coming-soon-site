@@ -14,9 +14,9 @@ const GlobalStyles = createGlobalStyle`
   --lightBlack: rgba(51,57,80,1.0);
   --grey:rgba(116,123,149,1.0);
   --red: rgba(240,91,91,1.0);
-  --borderRadius:0.2px;
-  --boxShadow-1: 0px 2px 15px 2px rgba(0, 0, 0, 0.2);
-  --boxShadow-2: 0px 2px 15px 2px rgba(0, 0, 0, 0.4);
+  --borderRadius:1.75rem;
+  --boxShadow-1:0px 25px 25px 0px rgba(0,0,0,0.2);
+  --boxShadow-2: 0px 25px 25px 0px rgba(0,0,0,0.4);
   --transition-1: all 0.3s ease-in-out;
   --transition-2: all 0.6s ease-in-out;
   --transition-3: all 0.9s ease-in-out;
@@ -85,9 +85,11 @@ a{
 .btn{
   padding:0.75rem 3.5rem;
   border: 1px solid var(--white-2);
-  border-radius: 1.75rem;
+  border-radius: var(--borderRadius);
   display: inline-block;
+  box-shadow: var(--boxShadow-1);
   transition: var(--transition-2);
+
 
   &.primary{
     background-color:var(--blue-1);
