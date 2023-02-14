@@ -2,11 +2,12 @@ import React from 'react'
 
 const MainContent = () => {
 	return (
-		<section>
-			<div className='cards'>
-				<h2>Price card components go here</h2>
-			</div>
-		</section>
+		
+		<main>
+			<section className='cards'>
+				<div>Price card components go here</div>
+			</section>
+		</main>
 	)
 }
 
