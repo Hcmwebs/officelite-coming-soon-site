@@ -5,11 +5,11 @@ import { StyledContainer, StyledHeader } from '../styles'
 
 const Header = () => {
 	return (
-		<StyledHeader>
-			<StyledContainer header>
+		<StyledContainer header>
+			<StyledHeader>
 				<Hero />
-			</StyledContainer>
-		</StyledHeader>
+			</StyledHeader>
+		</StyledContainer>
 	)
 }
 
