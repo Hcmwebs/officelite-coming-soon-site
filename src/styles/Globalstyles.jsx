@@ -7,14 +7,15 @@ const GlobalStyles = createGlobalStyle`
   --white-2:rgba(242, 242, 242, 1.0);
   --white-3:rgba(250, 250, 250, 1.0);
   --blue-1: rgba(81, 117, 255, 1.0);
-  --blue-2: rgba(81, 117, 255, 0.65);
-  --blue-3: rgba(81, 117, 255, 0.75);
+  --blue-2: rgba(81, 117, 255, 0.15);
+  --blue-3: rgba(81, 117, 255, 0.25);
   --lightBlue: rgba(130,156,255,1.0);
   --black: rgba(37,41,58,1.0);
   --lightBlack: rgba(51,57,80,1.0);
   --grey:rgba(116,123,149,1.0);
   --red: rgba(240,91,91,1.0);
   --borderRadius:1.75rem;
+  --borderRadius-2:0.75rem;
   --boxShadow-1: 0px 15px 25px 0px rgba(0,0,0,0.2);
   --boxShadow-2: 0px 15px 25px 0px rgba(0,0,0,0.4);
   --transition-1: all 0.3s ease-in-out;
@@ -83,11 +84,15 @@ a{
 }
 
 .btn{
+  font-weight: var(--bold);
+  font-size: 1rem;
+  line-height: 1.75rem;
   padding:0.75rem 3.5rem;
+  text-align:center;
   border-radius: var(--borderRadius);
   display: inline-block;
   box-shadow: var(--boxShadow-1);
-  transition: var(--transition-2);
+  transition: var(--transition-1);
 
 
   &.primary{
@@ -105,6 +110,10 @@ a{
 
     &.pro{
       background-color:var(--white-1);
+      &:hover{
+      background-color:var(--white-1);
+        color:var(--lightBlue);
+      }
     }
 
     &:hover{
