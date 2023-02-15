@@ -6,8 +6,9 @@ const StyledCard = styled.div`
 	padding-inline: 1.5rem;
 	display: grid;
 	place-items: center;
-	border: 1px solid #ccc;
+	box-shadow: var(boxShadow-1);
 	border-radius: var(--borderRadius);
+	background-color: ${({className}) => className ==='pro'? 'var(--blue-1)': 'var(--white-1)' };
 `
 
 export default StyledCard
