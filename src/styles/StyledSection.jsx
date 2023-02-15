@@ -9,6 +9,10 @@ const StyledSection = styled.section`
 	place-items: center;
 	grid-template-columns: 1fr;
 	gap: 2rem;
+
+	@media (min-width: 1440px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 `
 
 export default StyledSection
