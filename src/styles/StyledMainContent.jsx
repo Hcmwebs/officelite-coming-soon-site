@@ -5,7 +5,7 @@ const StyledMainContent = styled.main`
 	display: grid;
 	place-items: center;
 	position: absolute;
-	top: -10rem;
+	top: -50rem;
 	z-index: 9;
 `
 
