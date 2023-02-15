@@ -103,6 +103,10 @@ a{
     background-color:var(--blue-2);
     color:var(--blue-1);
 
+    &.pro{
+      background-color:var(--white-1);
+    }
+
     &:hover{
     background-color:var(--blue-3);
     color:var(--blue-1);
