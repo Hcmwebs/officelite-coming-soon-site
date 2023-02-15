@@ -110,6 +110,7 @@ a{
 
     &.pro{
       background-color:var(--white-1);
+
       &:hover{
       background-color:var(--white-1);
         color:var(--lightBlue);
