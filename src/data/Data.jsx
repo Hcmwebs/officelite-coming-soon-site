@@ -16,6 +16,8 @@ export const pricing = [
 		info: 'Basic document collaboration',
 		storage: '2 gb storage',
 		perks: 'Great security and support',
+		className: 'basic',
+		btnClassName: 'basic',
 	},
 	{
 		id: 2,
@@ -25,6 +27,8 @@ export const pricing = [
 		info: 'All essential integrations',
 		storage: '50 gb storage',
 		perks: 'More control and insights',
+		className: 'pro',
+		btnClassName: 'pro',
 	},
 	{
 		id: 3,
@@ -34,6 +38,8 @@ export const pricing = [
 		info: '  Robust work management',
 		storage: '100 gb storage',
 		perks: 'VIP support',
+		className: 'ultimate',
+		btnClassName: 'ultimate',
 	},
 ]
 
