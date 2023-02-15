@@ -7,6 +7,7 @@ import StyledButton from './StyledButton'
 import StyledFooter from './StyledFooter'
 import StyledMainContent from './StyledMainContent'
 import StyledSection from './StyledSection'
+import StyledCard from './StyledCard'
 export {
 	GlobalStyles,
 	StyledLogo,
@@ -16,5 +17,6 @@ export {
 	StyledButton,
   StyledMainContent,
   StyledSection,
+	StyledCard,
 	StyledFooter,
 }
