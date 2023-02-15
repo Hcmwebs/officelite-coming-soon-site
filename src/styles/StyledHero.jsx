@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledHero = styled.div`
 	padding-top: 2rem;
-	padding-bottom: 5rem;
+	padding-bottom: 15rem;
 	padding-inline: 1.5rem;
 	display: grid;
 	place-items: center;

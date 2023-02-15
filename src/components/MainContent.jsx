@@ -5,7 +5,7 @@ import {
 	StyledSection,
 } from '../styles'
 import { pricing } from '../data/Data'
-import Card from './index'
+import{ Card } from './index'
 
 const MainContent = () => {
 	return (
