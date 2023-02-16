@@ -9,35 +9,41 @@ const Timer = ({ duration }) => {
 		localDate.setDate(localDate.getDate() + 30)
 	).toDateString()
 	const getFormattedTime = (milliseconds) => {
-		let totalSeconds = parseInt(Math.floor(milliseconds / 1000))
-		let totalMinutes = parseInt(Math.floor(totalSeconds / 60))
-		let totalHours = parseInt(Math.floor(totalMinutes / 60))
-		let days = parseInt(Math.floor(totalHours / 24))
+		const totalSeconds = parseInt(Math.floor(milliseconds / 1000))
+		const totalMinutes = parseInt(Math.floor(totalSeconds / 60))
+		const totalHours = parseInt(Math.floor(totalMinutes / 60))
+		const days = parseInt(Math.floor(totalHours / 24))
 
-		let secs = parseInt(totalSeconds % 60)
-		let mins = parseInt(totalMinutes % 60)
-		let hrs = parseInt(totalHours % 24)
+		const secs = parseInt(totalSeconds % 60)
+		const mins = parseInt(totalMinutes % 60)
+		const hrs = parseInt(totalHours % 24)
 
 		return (
 			<StyledTimer>
 				<div className='clockTitle'>
-					<h3>Coming {startDate}</h3>
+					<h3>
+						Coming <span>{startDate}</span>
+					</h3>
 				</div>
 				<div className='clock'>
 					<div className='timer'>
-						{days} <span> days</span>
+						<h4>{days}</h4>
+						<span>days</span>
 					</div>
-					:
+
 					<div className='timer'>
-						{hrs} <span>hours</span>
+						<h4>{hrs}</h4>
+						<span>hours</span>
 					</div>
-					:
+
 					<div className='timer'>
-						{mins} <span>mins</span>
+						<h4>{mins}</h4>
+						<span>mins</span>
 					</div>
-					:
+
 					<div className='timer'>
-						{secs} <span>secs</span>
+						<h4>{secs}</h4>
+						<span>secs</span>
 					</div>
 				</div>
 			</StyledTimer>
@@ -51,6 +57,5 @@ const Timer = ({ duration }) => {
 	}, [time])
 	return <div>{getFormattedTime(time)}</div>
 }
-
 
 export default Timer

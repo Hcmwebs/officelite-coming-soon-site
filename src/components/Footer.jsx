@@ -9,7 +9,7 @@ const Footer = () => {
 		<StyledContainer footer>
 			<StyledFooter>
 				<Timer duration={timerDuration} />
-				<Link to='/signup'> Get Started</Link>
+				<Link to='/signup' className='btn primary'> Get Started</Link>
 			</StyledFooter>
 		</StyledContainer>
 	)
