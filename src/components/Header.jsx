@@ -5,7 +5,7 @@ import { StyledContainer, StyledHeader } from '../styles'
 
 const Header = () => {
 	return (
-		<StyledContainer header>
+		<StyledContainer>
 			<StyledHeader>
 				<Hero />
 			</StyledHeader>
