@@ -6,7 +6,10 @@ const StyledFooter = styled.footer`
 	display: grid;
 	place-items: center;
 	gap: 2.5rem;
+	@media (min-width: 768px) {
+		padding-top: 21.25rem;
+	}
+
 `
 
 export default StyledFooter
-				

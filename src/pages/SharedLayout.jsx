@@ -5,7 +5,7 @@ import { StyledContainer } from '../styles'
 
 const SharedLayout = () => {
 	return (
-		<StyledContainer >
+		<StyledContainer>
 			<Logo />
 			<Outlet />
 		</StyledContainer>

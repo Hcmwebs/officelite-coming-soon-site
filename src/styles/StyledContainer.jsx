@@ -8,6 +8,16 @@ const StyledContainer = styled.div`
 	position: relative;
 	background-color: ${({ footer }) =>
 		footer ? 'var(--black)' : 'var(--white-3)'};
+
+	&.signOut {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		@media (min-width: 1440px) {
+			flex-direction: row;
+		}
+	}
 `
 
 export default StyledContainer

@@ -6,5 +6,7 @@ const StyledHeader = styled.header`
 	justify-content: center;
 	flex-direction: column;
 	padding-bottom: 51.5rem;
+
+	
 `
 export default StyledHeader

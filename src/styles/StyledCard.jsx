@@ -9,22 +9,19 @@ const StyledCard = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	gap: 3.5rem;
+	gap: 2rem;
 	box-shadow: var(--boxShadow-1);
 	border-radius: var(--borderRadius-2);
 	background-color: ${({ className }) =>
 		className === 'pro' ? 'var(--blue-1)' : 'var(--white-1)'};
 	@media (min-width: 768px) {
 		width: min(100%, 688px);
-		min-height: 360px;
-		flex-direction: row;
-		position: relative;
+		min-height: 316px;
 		padding-right: 4.25rem;
 		padding-left: 3rem;
-		.btn {
-			position: absolute;
-			bottom: 2rem;
-		}
+		align-items: start;
+		gap: 1.25rem;
+
 	}
 	@media (min-width: 1440px) {
 		width: min(100%, 327px);
@@ -38,11 +35,6 @@ const StyledCard = styled.div`
 		}
 	}
 
-	.cardHeader {
-		display: grid;
-		place-items: center;
-		gap: 2.5rem;
-	}
 	h2 {
 		font-size: 1.25rem;
 		font-weight: var(--bold);
@@ -66,6 +58,10 @@ const StyledCard = styled.div`
 		text-align: center;
 		color: ${({ className }) =>
 			className === 'pro' ? 'var(--white-1)' : 'var(--black)'};
+			@media (min-width: 768px) {
+				text-align: left;
+				justify-self: start;
+			}
 	}
 	p {
 		font-size: 1rem;
@@ -74,11 +70,23 @@ const StyledCard = styled.div`
 		text-align: center;
 		color: ${({ className }) =>
 			className === 'pro' ? 'var(--white-1)' : 'var(--black)'};
+			@media (min-width: 768px) {
+				text-align: left;
+				justify-self: start;
+			}
 	}
 	.cardBody {
-		display: grid;
-		place-items: center;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-direction: column;
 		gap: 1rem;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+
+		}
 	}
 `
 
