@@ -5,6 +5,7 @@ const StyledFooter = styled.footer`
 	padding-top: 51.5rem;
 	display: grid;
 	place-items: center;
+	gap: 2.5rem;
 `
 
 export default StyledFooter
