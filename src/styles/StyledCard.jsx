@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledCard = styled.div`
-	width: min(100%, 688px);
+	width: min(100%, 327px);
 	min-height: 500px;
 	padding-block: 2.5rem;
 	padding-inline: 1.5rem;
@@ -9,12 +9,13 @@ const StyledCard = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	gap: 2rem;
+	gap: 3.5rem;
 	box-shadow: var(boxShadow-1);
 	border-radius: var(--borderRadius-2);
 	background-color: ${({ className }) =>
 		className === 'pro' ? 'var(--blue-1)' : 'var(--white-1)'};
 	@media (min-width: 768px) {
+		width: min(100%, 688px);
 		min-height: 320px;
 		flex-direction: row;
 		position: relative;
@@ -26,7 +27,7 @@ const StyledCard = styled.div`
 		}
 	}
 	@media (min-width: 1440px) {
-		width: min(100%, 350px);
+		width: min(100%, 327px);
 		min-height: 500px;
 		flex-direction: column;
 		padding-right: 1.5rem;
@@ -38,6 +39,9 @@ const StyledCard = styled.div`
 	}
 
 	.cardHeader {
+		display: grid;
+		place-items: center;
+		gap: 2.5rem;
 	}
 	h2 {
 		font-size: 1.25rem;
@@ -54,7 +58,6 @@ const StyledCard = styled.div`
 		display: grid;
 		place-items: center;
 		gap: 0.5rem;
-		padding-block: 0.5rem;
 	}
 	h3 {
 		font-size: 3.5rem;
