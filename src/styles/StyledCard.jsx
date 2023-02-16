@@ -10,13 +10,13 @@ const StyledCard = styled.div`
 	align-items: center;
 	flex-direction: column;
 	gap: 3.5rem;
-	box-shadow: var(boxShadow-1);
+	box-shadow: var(--boxShadow-1);
 	border-radius: var(--borderRadius-2);
 	background-color: ${({ className }) =>
 		className === 'pro' ? 'var(--blue-1)' : 'var(--white-1)'};
 	@media (min-width: 768px) {
 		width: min(100%, 688px);
-		min-height: 320px;
+		min-height: 360px;
 		flex-direction: row;
 		position: relative;
 		padding-right: 4.25rem;
