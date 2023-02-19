@@ -1,15 +1,12 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
+	width: 100%;
 	min-height: 30vh;
-	padding-top: 57.75rem;
+	padding-inline: 1.5rem;
 	display: grid;
 	place-items: center;
 	gap: 2.5rem;
-	@media (min-width: 768px) {
-		padding-top: 21.25rem;
-	}
-
 `
 
 export default StyledFooter
