@@ -5,13 +5,15 @@ import { Card } from './index'
 
 const MainContent = () => {
 	return (
-		<StyledMainContent>
-			<StyledSection>
-				{pricing.map((card) => {
-					return <Card key={card.id} {...card} />
-				})}
-			</StyledSection>
-		</StyledMainContent>
+		<StyledContainer>
+			<StyledMainContent>
+				<StyledSection>
+					{pricing.map((card) => {
+						return <Card key={card.id} {...card} />
+					})}
+				</StyledSection>
+			</StyledMainContent>
+		</StyledContainer>
 	)
 }
 
