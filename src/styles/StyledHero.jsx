@@ -10,6 +10,10 @@ const StyledHero = styled.div`
 	align-items: center;
 	@media (min-width: 768px) {
 		flex-direction: row-reverse;
+		padding-bottom: 8.75rem
+	}
+	@media (min-width: 1440px) {
+		padding-bottom: 11.5625rem
 	}
 
 	.heroHeader {

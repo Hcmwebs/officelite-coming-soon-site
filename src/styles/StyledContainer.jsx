@@ -1,17 +1,21 @@
 import styled from 'styled-components'
 
 const StyledContainer = styled.div`
-	width: min(100%, 1440px);
+	width: min(100%, 375px);
+	margin: 0 auto;
 	display: grid;
 	place-items: center;
 	position: relative;
-	padding-inline: 1.5rem;
+	background-color: ${({ footer }) =>
+		footer ? 'var(--black)' : 'var(--white-3)'};
 
 	@media (min-width: 768px) {
-		padding-inline: 2.5rem
+		width: min(100%, 768px);
+		padding-inline: 2.5rem;
 	}
 	@media (min-width: 1440px) {
-		padding-inline: 10.3125rem
+		width: min(100%, 1440px);
+		padding-inline: 10.3125rem;
 	}
 `
 
