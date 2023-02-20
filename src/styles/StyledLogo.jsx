@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 const StyledLogo = styled.div`
+width: 100%;
 	padding-block: 3rem;
 	display: grid;
 	place-items: center;

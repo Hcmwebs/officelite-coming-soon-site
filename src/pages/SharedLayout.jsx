@@ -5,10 +5,10 @@ import { StyledContainer } from '../styles'
 
 const SharedLayout = () => {
 	return (
-		<StyledContainer>
+		<>
 			<Logo />
 			<Outlet />
-		</StyledContainer>
+		</>
 	)
 }
 
