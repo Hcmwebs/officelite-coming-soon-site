@@ -8,6 +8,7 @@ const StyledHero = styled.div`
 	justify-content: space-between;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
 	@media (min-width: 768px) {
 		flex-direction: row-reverse;
 		padding-bottom: 8.75rem
@@ -66,6 +67,18 @@ const StyledHero = styled.div`
 				line-height: 1.75rem;
 			}
 		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 300px;
+		background: url('/public/bg-pattern-home-header.svg') no-repeat center
+			center;
+		z-index: 9;
 	}
 `
 
