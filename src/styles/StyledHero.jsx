@@ -11,10 +11,10 @@ const StyledHero = styled.div`
 	position: relative;
 	@media (min-width: 768px) {
 		flex-direction: row-reverse;
-		padding-bottom: 8.75rem
+		padding-bottom: 8.75rem;
 	}
 	@media (min-width: 1440px) {
-		padding-bottom: 11.5625rem
+		padding-bottom: 11.5625rem;
 	}
 
 	.heroHeader {
@@ -76,8 +76,7 @@ const StyledHero = styled.div`
 		left: 0;
 		width: 100%;
 		height: 300px;
-		background: url('/public/bg-pattern-home-header.svg') no-repeat center
-			center;
+		background: url('/bg-pattern-home-header.svg') no-repeat center center;
 		z-index: 9;
 	}
 `
