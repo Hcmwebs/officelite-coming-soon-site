@@ -25,8 +25,8 @@ const StyledCard = styled.div`
 	@media (min-width: 1440px) {
 		width: min(100%, 327px);
 		min-height: 500px;
+		align-items: center;
 		flex-direction: column;
-		justify-items: start;
 		padding-right: 1.5rem;
 		padding-left: 1.5rem;
 
@@ -44,6 +44,9 @@ const StyledCard = styled.div`
 			className === 'pro' ? 'var(--white-1)' : 'var(--black)'};
 		@media (min-width: 768px) {
 			align-self: start;
+		}
+		@media (min-width: 1440px) {
+			align-self: center;
 		}
 	}
 	.price {
@@ -63,6 +66,10 @@ const StyledCard = styled.div`
 			text-align: left;
 			justify-self: start;
 		}
+		@media (min-width: 1440px) {
+			align-self: center;
+			justify-self: center;
+		}
 	}
 	p {
 		font-size: 1rem;
@@ -72,8 +79,12 @@ const StyledCard = styled.div`
 		color: ${({ className }) =>
 			className === 'pro' ? 'var(--white-1)' : 'var(--black)'};
 		@media (min-width: 768px) {
-			text-align: left;
+			text-align: center;
 			justify-self: start;
+		}
+		@media (min-width: 1440px) {
+			text-align: center;
+			justify-self: center;
 		}
 	}
 	.cardBody {
@@ -93,6 +104,8 @@ const StyledCard = styled.div`
 	}
 	.cardInfo {
 		width: 100%;
+		display: grid;
+		place-items: center;
 	}
 `
 
