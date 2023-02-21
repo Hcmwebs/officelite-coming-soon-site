@@ -107,6 +107,31 @@ const StyledCard = styled.div`
 		display: grid;
 		place-items: center;
 	}
+
+	&.pro {
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -60%;
+			left: 0;
+			width: 100%;
+			height: 880px;
+			background: url('/bg-pattern-home-pricing.svg') no-repeat center center;
+			z-index: 9;
+
+			@media (min-width: 768px) {
+				top: -90%;
+				left: -30%;
+			}
+			@media (min-width: 768px) {
+				top: -60%;
+				left: 0%;
+			}
+		}
+	}
 `
 
 export default StyledCard
