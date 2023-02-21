@@ -27,9 +27,8 @@ const StyledFooter = styled.footer`
 		height: 1248px;
 		position: absolute;
 		top: 5%;
-		background: url('/public/bg-pattern-home-footer.svg') no-repeat center
-			center;
-		z-index: 9;
+		background: url('/bg-pattern-home-footer.svg') no-repeat center center;
+		z-index: 2;
 
 		@media (min-width: 768px) {
 			height: 986px;
