@@ -12,6 +12,7 @@ const StyledHero = styled.div`
 	@media (min-width: 768px) {
 		flex-direction: row-reverse;
 		padding-bottom: 8.75rem;
+		padding-inline: 0;
 	}
 	@media (min-width: 1440px) {
 		padding-bottom: 11.5625rem;
