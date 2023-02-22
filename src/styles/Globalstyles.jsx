@@ -87,10 +87,11 @@ a{
   font-weight: var(--bold);
   font-size: 1rem;
   line-height: 1.75rem;
-  padding:0.75rem 3.5rem;
+  padding:0.75rem 2.6rem;
   text-align:center;
   border-radius: var(--borderRadius);
-  display: inline-block;
+  display: grid;
+  place-items: center;
   box-shadow: var(--boxShadow-1);
   transition: var(--transition-1);
 
