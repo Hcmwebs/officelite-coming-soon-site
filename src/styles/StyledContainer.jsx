@@ -10,12 +10,7 @@ const StyledContainer = styled.div`
 		footer ? 'var(--black)' : 'var(--white-3)'};
 	overflow: ${({className}) => className === 'mainContent' ? 'visible' : 'hidden'};
 
-	@media (min-width: 768px) {
-		padding-inline: 2.5rem;
-	}
-	@media (min-width: 1440px) {
-		padding-inline: 10.3125rem;
-	}
+	
 `
 
 export default StyledContainer

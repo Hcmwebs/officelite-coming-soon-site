@@ -132,6 +132,17 @@ a{
     }
   }
 
+}
+
+.sectionCenter{
+  padding-inline:0;
+
+  @media (min-width: 768px) {
+		padding-inline: 2.5rem;
+	}
+	@media (min-width: 1440px) {
+		padding-inline: 10.3125rem;
+	}
 
 }
 
