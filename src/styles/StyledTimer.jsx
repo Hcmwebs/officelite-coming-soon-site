@@ -11,6 +11,9 @@ const StyledTimer = styled.div`
 		width: 100%;
 		display: grid;
 		place-items: center;
+		@media (min-width:1440px) {
+			justify-items: start;
+		}
 
 		h3 {
 			font-size: 1rem;
@@ -41,15 +44,24 @@ const StyledTimer = styled.div`
 		align-items: center;
 		flex-direction: column;
 		border: none;
-		border-radius: 0.2rem;
+		border-radius: 0.25rem;
 		box-shadow:var(--box-shadow-1);
 		background-color: var(--lightBlack);
+		z-index: 9;
+		@media (min-width: 768px) {
+			width: 100px;
+			height: 128px;
+			border-radius: 0.75rem;
+		}
 		h4{
 			font-size: 2rem;
 			font-weight: var(--bold);
 			line-height: 3rem;
 			text-align: center;
 			color: var(--white-1);
+			@media (min-width: 768px) {
+				font-size: 3.5rem;
+			}
 		}
 		span {
 			font-size: 0.75rem;
@@ -59,6 +71,10 @@ const StyledTimer = styled.div`
 			text-align: center;
 			color: var(--white-1);
 			opacity: 0.5;
+
+			@media (min-width: 768px) {
+				font-size:1rem;
+			}
 
 
 		}
