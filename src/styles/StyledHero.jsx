@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const StyledHero = styled.div`
 	padding-top: 2rem;
 	padding-bottom: 5rem;
-	padding-inline: 1.5rem;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -12,7 +11,6 @@ const StyledHero = styled.div`
 	@media (min-width: 768px) {
 		flex-direction: row-reverse;
 		padding-bottom: 8.75rem;
-		padding-inline: 0;
 	}
 	@media (min-width: 1440px) {
 		padding-bottom: 11.5625rem;

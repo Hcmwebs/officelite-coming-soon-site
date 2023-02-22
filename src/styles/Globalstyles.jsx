@@ -135,7 +135,7 @@ a{
 }
 
 .sectionCenter{
-  padding-inline:0;
+  padding-inline:1.5rem;
 
   @media (min-width: 768px) {
 		padding-inline: 2.5rem;
