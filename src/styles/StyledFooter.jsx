@@ -21,8 +21,11 @@ const StyledFooter = styled.footer`
 		justify-content: space-between;
 		flex-direction: row;
 	}
+	.btn{
+		z-index: 9;
+	}
 
-	&::before {
+	/* &::before {
 		content: '';
 		width: 100%;
 		height: 1248px;
@@ -40,7 +43,7 @@ const StyledFooter = styled.footer`
 			top: 0%;
 			left: -30%;
 		}
-	}
+	} */
 `
 
 export default StyledFooter
