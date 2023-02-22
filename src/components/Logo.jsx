@@ -4,7 +4,7 @@ import { StyledLogo } from '../styles'
 
 const Logo = () => {
 	return (
-		<StyledLogo>
+		<StyledLogo className = 'sectionCenter'>
 			<Link to='/'>
 				<img src='/logo.svg' alt='Logo' />
 			</Link>

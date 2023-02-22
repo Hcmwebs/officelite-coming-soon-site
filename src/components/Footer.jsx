@@ -6,7 +6,7 @@ import { Timer } from './index'
 
 const Footer = () => {
 	return (
-		<StyledFooter>
+		<StyledFooter className='sectionCenter'>
 			<Timer duration={timerDuration} />
 			<Link to='/signup' className='btn primary'>
 				Get Started

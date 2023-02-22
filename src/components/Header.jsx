@@ -5,7 +5,7 @@ import { StyledHeader } from '../styles'
 
 const Header = () => {
 	return (
-		<StyledHeader>
+		<StyledHeader className='sectionCenter'>
 			<Pattern title='header' image='/bg-pattern-home-header.svg' />
 			<Hero />
 		</StyledHeader>
