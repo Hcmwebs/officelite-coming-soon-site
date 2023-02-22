@@ -21,29 +21,9 @@ const StyledFooter = styled.footer`
 		justify-content: space-between;
 		flex-direction: row;
 	}
-	.btn{
+	.btn {
 		z-index: 9;
 	}
-
-	/* &::before {
-		content: '';
-		width: 100%;
-		height: 1248px;
-		position: absolute;
-		top: 5%;
-		background: url('/bg-pattern-home-footer.svg') no-repeat center center;
-		z-index: 2;
-
-		@media (min-width: 768px) {
-			height: 986px;
-			top: 30%;
-		}
-		@media (min-width: 1440px) {
-			height: 857px;
-			top: 0%;
-			left: -30%;
-		}
-	} */
 `
 
 export default StyledFooter
