@@ -7,6 +7,7 @@ const StyledHeader = styled.header`
 	align-items: space-between;
 	justify-content: center;
 	flex-direction: column;
+	position: relative;
 
 
 	@media (min-width: 768px) {
