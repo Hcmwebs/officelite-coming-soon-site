@@ -5,7 +5,7 @@ import { Card } from './index'
 
 const MainContent = () => {
 	return (
-		<StyledContainer>
+		<StyledContainer className='mainContent'>
 			<StyledMainContent>
 				<StyledSection>
 					{pricing.map((card) => {

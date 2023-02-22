@@ -8,6 +8,7 @@ const StyledContainer = styled.div`
 	position: relative;
 	background-color: ${({ footer }) =>
 		footer ? 'var(--black)' : 'var(--white-3)'};
+	overflow: ${({className}) => className === 'mainContent' ? 'visible' : 'hidden'};
 
 	@media (min-width: 768px) {
 		padding-inline: 2.5rem;

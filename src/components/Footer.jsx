@@ -6,14 +6,12 @@ import { Timer } from './index'
 
 const Footer = () => {
 	return (
-		<StyledContainer footer>
-			<StyledFooter>
-				<Timer duration={timerDuration} />
-				<Link to='/signup' className='btn primary'>
-					Get Started
-				</Link>
-			</StyledFooter>
-		</StyledContainer>
+		<StyledFooter>
+			<Timer duration={timerDuration} />
+			<Link to='/signup' className='btn primary'>
+				Get Started
+			</Link>
+		</StyledFooter>
 	)
 }
 
