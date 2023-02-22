@@ -12,6 +12,11 @@ const StyledPattern = styled.div`
       top:-30%;
       right: -50%;
     }
+    @media (min-width: 1440px) {
+      height: 1134px;
+      top:-65%;
+      right: -40%;
+    }
 	}
 `
 export default StyledPattern
