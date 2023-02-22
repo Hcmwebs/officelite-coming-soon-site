@@ -68,17 +68,6 @@ const StyledHero = styled.div`
 			}
 		}
 	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 300px;
-		background: url('/bg-pattern-home-header.svg') no-repeat center center;
-		z-index: 9;
-	}
 `
 
 export default StyledHero
