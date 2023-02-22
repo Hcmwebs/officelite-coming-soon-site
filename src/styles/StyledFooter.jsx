@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
 	align-items: center;
 	flex-direction: column;
 	gap: 2.5rem;
-	background-color:var(--black);
+	background-color: var(--black);
 	position: relative;
 	overflow: hidden;
 	@media (min-width: 768px) {
