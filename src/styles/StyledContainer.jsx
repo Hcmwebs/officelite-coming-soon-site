@@ -6,11 +6,8 @@ const StyledContainer = styled.div`
 	display: grid;
 	place-items: center;
 	position: relative;
-	background-color: ${({ footer }) =>
-		footer ? 'var(--black)' : 'var(--white-3)'};
-	overflow: ${({className}) => className === 'mainContent' ? 'visible' : 'hidden'};
-
-	
+	background-color: var(--white-3);
+	overflow: hidden;
 `
 
 export default StyledContainer
