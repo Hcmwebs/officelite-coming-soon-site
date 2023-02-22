@@ -9,6 +9,7 @@ import Footer from './Footer'
 import Logo from './Logo'
 import Hero from './Hero'
 import Button from './Button'
+import Pattern from './Pattern'
 
 export {
 	Header,
@@ -22,4 +23,5 @@ export {
 	Timer,
 	Form,
 	FormInputs,
+	Pattern,
 }

@@ -1,15 +1,14 @@
 import React from 'react'
 
-import { Hero } from './index'
-import { StyledContainer, StyledHeader } from '../styles'
+import { Hero, Pattern } from './index'
+import { StyledHeader } from '../styles'
 
 const Header = () => {
 	return (
-		<StyledContainer>
-			<StyledHeader>
-				<Hero />
-			</StyledHeader>
-		</StyledContainer>
+		<StyledHeader>
+			<Pattern title='header' image='/bg-pattern-home-header.svg' />
+			<Hero />
+		</StyledHeader>
 	)
 }
 

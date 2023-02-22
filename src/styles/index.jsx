@@ -9,6 +9,7 @@ import StyledMainContent from './StyledMainContent'
 import StyledSection from './StyledSection'
 import StyledCard from './StyledCard'
 import StyledTimer from './StyledTimer'
+import StyledPattern from './StyledPattern'
 export {
 	GlobalStyles,
 	StyledLogo,
@@ -21,4 +22,5 @@ export {
 	StyledCard,
 	StyledFooter,
 	StyledTimer,
+	StyledPattern
 }
