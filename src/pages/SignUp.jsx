@@ -1,10 +1,15 @@
 import React from 'react'
-import { Form, Timer } from '../components'
+import { Form, Header, MainContent, Footer, Timer } from '../components'
 import { signUpHero, timerDuration } from '../data/Data'
 
 const SignUp = () => {
-	const { title, body } = signUpHero
-	return <div>footer goes here</div>
+	return (
+		<>
+			<Header title='signUpPage' />
+			<MainContent />
+			<Footer />
+		</>
+	)
 }
 
 export default SignUp
