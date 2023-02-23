@@ -2,10 +2,9 @@ import React from 'react'
 
 import { Hero, Pattern } from './index'
 import { StyledHeader } from '../styles'
-
-const Header = () => {
+const Header = ({title}) => {
 	return (
-		<StyledHeader className='sectionCenter'>
+		<StyledHeader className={`${title} sectionCenter`}>
 			<Pattern title='header' image='/bg-pattern-home-header.svg' />
 			<Hero />
 		</StyledHeader>
