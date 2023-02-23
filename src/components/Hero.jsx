@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { homeHero } from '../data/Data'
 import { StyledHero } from '../styles'
 
+
 const Hero = () => {
-	const { title, body } = homeHero
+	const [title, setTitle] = useState();
+	const [body, setBody] = useState();
+
 	return (
-		<StyledHero>
+		<StyledHero title={title}>
 			<img
 				src='/illustration-home-charts.svg'
 				alt='illustration Chart'
