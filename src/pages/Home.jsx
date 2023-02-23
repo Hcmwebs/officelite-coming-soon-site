@@ -1,10 +1,10 @@
 import React from 'react'
-import { Header, MainContent, Footer } from '../components'
+import { HomeHeader, MainContent, Footer } from '../components'
 
 const Home = () => {
 	return (
 		<>
-			<Header title='homePage' />
+			<HomeHeader title='homePage' />
 			<MainContent />
 			<Footer />
 		</>
