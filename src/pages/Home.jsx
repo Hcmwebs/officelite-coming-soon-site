@@ -4,7 +4,7 @@ import { Header, MainContent, Footer } from '../components'
 const Home = () => {
 	return (
 		<>
-			<Header />
+			<Header title='homePage' />
 			<MainContent />
 			<Footer />
 		</>
