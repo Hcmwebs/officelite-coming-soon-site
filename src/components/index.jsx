@@ -1,21 +1,25 @@
-import Navbar from './Navbar'
 import Timer from './Timer'
 import Form from './Form'
 import FormInputs from './FormInputs'
-import Header from './Header'
+import HomeHeader from './HomeHeader'
+import SignUpHeader from './SignUpHeader'
 import MainContent from './MainContent'
 import Card from './Card'
 import Footer from './Footer'
 import Logo from './Logo'
-import Hero from './Hero'
+import HomeHero from './HomeHero'
+import SignUpHero from './SignUpHero'
 import Button from './Button'
 import Pattern from './Pattern'
+import SignUpMainContent from './SignUpMainContent'
+import SignUpFooter from './SignUpFooter'
 
 export {
-	Header,
-	Navbar,
+	HomeHeader,
+	SignUpHeader,
 	Logo,
-	Hero,
+	HomeHero,
+	SignUpHero,
 	Button,
 	MainContent,
 	Card,
@@ -24,4 +28,6 @@ export {
 	Form,
 	FormInputs,
 	Pattern,
+	SignUpMainContent,
+	SignUpFooter,
 }
