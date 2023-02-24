@@ -7,6 +7,7 @@ const StyledPattern = styled.div`
 		width: 458px;
 		height: 458px;
 		top: -20%;
+		left: -10%;
 
 		@media (min-width: 768px) {
 			width: 666px;
