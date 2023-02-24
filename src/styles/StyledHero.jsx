@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
 const StyledHero = styled.div`
+	&.homePage {
+	}
+	&.signUpPage {
+	}
 	padding-top: 2rem;
 	padding-bottom: 5rem;
 	display: flex;
