@@ -2,13 +2,12 @@ import React from 'react'
 
 import { HomeHero, Pattern } from './index'
 import { StyledHeader } from '../styles'
-const HomeHeader = ({title}) => {
+const HomeHeader = () => {
 	return (
-		<StyledHeader className={`${title} sectionCenter`}>
-			<Pattern title='header' image='/bg-pattern-home-header.svg' />
-			<HomeHero />
+		<StyledHeader className={'homePage sectionCenter'}>
+			<Pattern title='homePage' image='/bg-pattern-home-header.svg' />
+			<HomeHero page= 'homePage' />
 		</StyledHeader>
-	)
-}
+	)}
 
 export default HomeHeader
