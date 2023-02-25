@@ -11,19 +11,20 @@ const StyledTimer = styled.div`
 		width: 100%;
 		display: grid;
 		place-items: center;
-		background-color: var(--white);
-		@media (min-width:1440px) {
+
+		@media (min-width: 1440px) {
 			justify-items: start;
 		}
 
 		h3 {
 			font-size: 1rem;
-			font-weight:var(--bold);
+			font-weight: var(--bold);
 			line-height: 3rem;
 			letter-spacing: 0.2rem;
 			text-transform: uppercase;
 			text-align: center;
-			color: var(--white-1);
+			color: ${({ className }) =>
+				className === 'homePage' ? 'var(--white-1)' : 'var(--black)'};
 
 			span {
 				color: var(--blue-1);
@@ -38,7 +39,7 @@ const StyledTimer = styled.div`
 	}
 
 	.timer {
-		width:72px;
+		width: 72px;
 		height: 92px;
 		display: flex;
 		justify-content: center;
@@ -46,7 +47,7 @@ const StyledTimer = styled.div`
 		flex-direction: column;
 		border: none;
 		border-radius: 0.25rem;
-		box-shadow:var(--box-shadow-1);
+		box-shadow: var(--box-shadow-1);
 		background-color: var(--lightBlack);
 		z-index: 9;
 		@media (min-width: 768px) {
@@ -54,7 +55,7 @@ const StyledTimer = styled.div`
 			height: 128px;
 			border-radius: 0.75rem;
 		}
-		h4{
+		h4 {
 			font-size: 2rem;
 			font-weight: var(--bold);
 			line-height: 3rem;
@@ -74,18 +75,13 @@ const StyledTimer = styled.div`
 			opacity: 0.5;
 
 			@media (min-width: 768px) {
-				font-size:1rem;
+				font-size: 1rem;
 			}
-
-
 		}
-		.homePage{
-
+		.homePage {
 		}
-		&.signUpPage{
-			
+		&.signUpPage {
 		}
-
 	}
 `
 export default StyledTimer
