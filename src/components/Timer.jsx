@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { StyledTimer } from '../styles'
 
-const Timer = ({ duration }) => {
+const Timer = ({ duration, className}) => {
 	const [time, setTime] = useState(duration)
 	let localDate = new Date()
 	let startDate = new Date(
@@ -18,7 +18,7 @@ const Timer = ({ duration }) => {
 		const hrs = parseInt(totalHours % 24)
 
 		return (
-			<StyledTimer>
+			<StyledTimer className={className}>
 				<div className='clockTitle'>
 					<h3>
 						Coming <span>{startDate}</span>

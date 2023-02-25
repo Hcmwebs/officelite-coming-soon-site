@@ -9,13 +9,13 @@ const HomeHero = () => {
 const {title,body} = homeHero
 
 	return (
-		<StyledHero>
+		<StyledHero className= 'homePage'>
 			<img
 				src='/illustration-home-charts.svg'
 				alt='illustration Chart'
 				className='heroHeader'
 			/>
-			<div className='heroBody'>
+			<div className='heroBody homePage'>
 				<h1>{title}</h1>
 				<p>{body}</p>
 				<Link to='/signup' className='btn primary'>
