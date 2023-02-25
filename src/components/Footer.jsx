@@ -8,7 +8,7 @@ const Footer = () => {
 	return (
 		<StyledFooter className='sectionCenter'>
 			<Pattern title='footer' image='/bg-pattern-home-footer.svg' />
-			<Timer duration={timerDuration} />
+			<Timer duration={timerDuration} className='homePage' />
 			<Link to='/signup' className='btn primary'>
 				Get Started
 			</Link>
