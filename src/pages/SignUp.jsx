@@ -1,12 +1,12 @@
 import React from 'react'
-import { SignUpHeader, SignUpMainContent, Footer } from '../components'
+import { SignUpHeader, SignUpMainContent, SignUpFooter } from '../components'
 
 const SignUp = () => {
 	return (
 		<>
 			<SignUpHeader page='signUpPage' />
 			<SignUpMainContent />
-			<Footer />
+			<SignUpFooter />
 		</>
 	)
 }
