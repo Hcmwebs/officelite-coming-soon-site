@@ -1,10 +1,7 @@
 import styled from 'styled-components'
 
 const StyledHero = styled.div`
-	&.homePage {
-	}
-	&.signUpPage {
-	}
+
 	padding-top: 2rem;
 	padding-bottom: 5rem;
 	display: flex;
@@ -13,13 +10,12 @@ const StyledHero = styled.div`
 	align-items: center;
 	position: relative;
 	@media (min-width: 768px) {
-		flex-direction: row-reverse;
+		flex-direction: ${({className}) => className === 'homePage' ? 'row-reverse' : 'row'};
 		padding-bottom: 8.75rem;
 	}
 	@media (min-width: 1440px) {
 		padding-bottom: 11.5625rem;
 	}
-
 	.heroHeader {
 		width: 171px;
 		@media (min-width: 768px) {
@@ -71,6 +67,7 @@ const StyledHero = styled.div`
 			}
 		}
 	}
+
 `
 
 export default StyledHero

@@ -2,24 +2,30 @@ import styled from 'styled-components'
 
 const StyledPattern = styled.div`
 	position: absolute;
+	width: 458px;
+	height: 458px;
+	left: -10%;
+	@media (min-width: 768px) {
+		width: 666px;
+		height: 666px;
+	}
+	@media (min-width: 1440px) {
+		width: 1134px;
+		height: 1134px;
+	}
 
-	&.header {
-		width: 458px;
-		height: 458px;
+	&.homePage {
 		top: -20%;
-		left: -10%;
-
-		@media (min-width: 768px) {
-			width: 666px;
-			height: 666px;
-			top: -30%;
-			right: -50%;
-		}
 		@media (min-width: 1440px) {
-			width: 1134px;
-			height: 1134px;
 			top: -65%;
 			right: -40%;
+		}
+	}
+
+	&.signUpPage {
+		top: -10%;
+		@media (min-width: 768px) {
+			display: none;
 		}
 	}
 

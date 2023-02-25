@@ -17,9 +17,5 @@ const StyledHeader = styled.header`
 			padding-bottom: 15.63rem;
 		}
 	}
-
-	.signUpPage{
-		
-	}
 `
 export default StyledHeader

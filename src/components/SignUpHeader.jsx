@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyledHeader } from '../styles'
-import {Pattern,SignUpHero} from './index'
+import { Pattern, SignUpHero } from './index'
 
-const SignupHeader = ({title}) => {
+const SignupHeader = () => {
 	return (
-		<StyledHeader className={`${title} sectionCenter`}>
-			<Pattern title='header' image='/bg-pattern-home-header.svg' />
-			<SignUpHero/>
+		<StyledHeader className={'signUpPage sectionCenter'}>
+			<Pattern title='signUpPage' image='/bg-pattern-home-header.svg' />
+			<SignUpHero />
 		</StyledHeader>
 	)
 }

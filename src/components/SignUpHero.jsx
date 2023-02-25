@@ -7,11 +7,11 @@ const SignUpHero = () => {
 	const { title, body } = signUpHero
 
 	return (
-		<StyledHero className='signUp'>
-			<div className='heroBody'>
+		<StyledHero className='signUpPage'>
+			<div className='heroBody signUpPage'>
 				<h1>{title}</h1>
 				<p>{body}</p>
-				<Timer duration={timerDuration} />
+				<Timer duration={timerDuration} className='signUpPage' />
 			</div>
 		</StyledHero>
 	)

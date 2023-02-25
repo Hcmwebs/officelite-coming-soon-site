@@ -1,13 +1,12 @@
 import React from 'react'
-import { SignUpHeader, SignUpMainContent, SignUpFooter } from '../components'
-import { signUpHero, timerDuration } from '../data/Data'
+import { SignUpHeader, SignUpMainContent, Footer } from '../components'
 
 const SignUp = () => {
 	return (
 		<>
-			<SignUpHeader title='signUpPage' />
+			<SignUpHeader page='signUpPage' />
 			<SignUpMainContent />
-			<SignUpFooter />
+			<Footer />
 		</>
 	)
 }

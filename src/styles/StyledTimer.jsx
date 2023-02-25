@@ -5,12 +5,13 @@ const StyledTimer = styled.div`
 	display: grid;
 	place-items: center;
 	gap: 1.125rem;
-	background-color: var(--white);
 	padding-top: 3.25rem;
+
 	.clockTitle {
 		width: 100%;
 		display: grid;
 		place-items: center;
+		background-color: var(--white);
 		@media (min-width:1440px) {
 			justify-items: start;
 		}
@@ -77,6 +78,12 @@ const StyledTimer = styled.div`
 			}
 
 
+		}
+		.homePage{
+
+		}
+		&.signUpPage{
+			
 		}
 
 	}
