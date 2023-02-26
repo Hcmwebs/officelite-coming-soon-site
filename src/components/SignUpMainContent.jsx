@@ -1,7 +1,15 @@
 import React from 'react'
+import { StyledMainContent,StyledSection } from '../styles'
+import {Form} from './index'
 
 const SignUpMainContent = () => {
-	return <div>SignUpMainContent goes here</div>
+	return (
+		<StyledMainContent className='sectionCenter'>
+			<StyledSection>
+				<Form />
+			</StyledSection>
+		</StyledMainContent>
+	)
 }
 
 export default SignUpMainContent
