@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const StyledHero = styled.div`
 
 	padding-top: 2rem;
-	padding-bottom: 5rem;
+	padding-bottom: ${({className}) => className === 'homePage' ? '5rem' : '19.5rem'};
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
