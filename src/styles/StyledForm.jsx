@@ -14,6 +14,7 @@ const StyledForm = styled.form`
 		width: 100%;
 		height: 45px;
 		display: grid;
+		position: relative;
 	}
 	label {
 		font-size: 12px;
@@ -33,18 +34,36 @@ const StyledForm = styled.form`
 	}
 	input:invalid[focused='true'] ~ .error,
 	select:invalid[focused='true'] ~ .error {
-		display: block;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
+	input:invalid[focused='true'] ~ input::placeholder {
+		color: var(--white-1);
+		opacity: 0;
+	}
+
 	.error {
-		font-size: 12px;
+		width: 100%;
 		padding-inline: 0.625rem;
 		color: red;
+		/* position: absolute;
+		top: 0.625rem; */
 		display: none;
+
+		small {
+			font-size: 1rem;
+			line-height: 1.75rem;
+			font-size: var(--regular);
+			text-transform: capitalize;
+		}
 	}
 
 	.submit {
 		font-size: 18px;
 		width: 100%;
+		-webkit-appearance: button;
+		-moz-appearance: button;
 		cursor: pointer;
 	}
 `

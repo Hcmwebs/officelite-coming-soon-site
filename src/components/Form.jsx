@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import { FormInputs } from './index'
 import { useNavigate } from 'react-router-dom'
 import { StyledForm } from '../styles'
@@ -32,7 +31,7 @@ const Form = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		if (
-			!values.name &&
+			!values.fullname &&
 			!values.email &&
 			!values.pack &&
 			!values.phone &&
@@ -62,7 +61,7 @@ const Form = () => {
 					handleFocus={handleFocus}
 				/>
 				<button className='btn primary submit' type='submit'>
-					Send
+					Get on the list
 				</button>
 			</StyledForm>
 			<div>
