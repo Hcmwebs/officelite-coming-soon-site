@@ -5,7 +5,7 @@ import {Form} from './index'
 const SignUpMainContent = () => {
 	return (
 		<StyledMainContent className='sectionCenter'>
-			<StyledSection>
+			<StyledSection className='signUpPage'>
 				<Form />
 			</StyledSection>
 		</StyledMainContent>
