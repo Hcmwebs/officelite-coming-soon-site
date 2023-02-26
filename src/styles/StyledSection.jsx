@@ -5,17 +5,20 @@ const StyledSection = styled.section`
 	display: grid;
 	place-items: center;
 	grid-template-columns: 1fr;
-	gap: 2rem;
+	gap: ${({ className }) => (className === 'homePage' ? '2rem' : '0')};
 	position: absolute;
-	top: -48.9rem;
 	z-index: 9;
+	top: ${({ className }) =>
+		className === 'homePage' ? '-48.9rem' : '-14.5rem'};
 
 	@media (min-width: 768px) {
-		top: -31.63rem;
+		top: ${({ className }) =>
+			className === 'homePage' ? '-31.63rem' : '0rem'};
 	}
 	@media (min-width: 1440px) {
 		width: min(100%, 1110px);
-		top: -15.63rem;
+		top: ${({ className }) =>
+			className === 'homePage' ? '-15.63rem' : '0rem'};
 		grid-template-columns: repeat(3, 1fr);
 	}
 `
