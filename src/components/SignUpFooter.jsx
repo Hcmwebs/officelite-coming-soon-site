@@ -1,7 +1,14 @@
 import React from 'react'
+import { StyledFooter } from '../styles'
+import {Pattern} from './index'
 
 const SignUpFooter = () => {
-	return <div>SignUpFooter goes here</div>
+	return (
+		<StyledFooter className = 'sectionCenter'>
+			<Pattern title='footer' image='/public/bg-pattern-signup-side.svg'/>
+			SignUpFooter goes here
+		</StyledFooter>
+	)
 }
 
 export default SignUpFooter
