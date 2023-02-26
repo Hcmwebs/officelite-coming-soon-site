@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { StyledForm } from '../styles'
 
 const initialState = {
+	fullname: '',
 	email: '',
 	pack: 'Select pack',
 	phone: '',
@@ -30,7 +31,13 @@ const Form = () => {
 	}
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		if (!values.email && !values.pack && !values.phone && !values.company)
+		if (
+			!values.name &&
+			!values.email &&
+			!values.pack &&
+			!values.phone &&
+			!values.company
+		)
 			return
 
 		setError(false)
@@ -46,7 +53,6 @@ const Form = () => {
 
 	return (
 		<>
-
 			<StyledForm onSubmit={handleSubmit}>
 				<FormInputs
 					handleChange={handleChange}
@@ -55,7 +61,7 @@ const Form = () => {
 					focused={focused}
 					handleFocus={handleFocus}
 				/>
-				<button className='submit' type='submit'>
+				<button className='btn primary submit' type='submit'>
 					Send
 				</button>
 			</StyledForm>
@@ -64,6 +70,7 @@ const Form = () => {
 					const { id, company, phone, pack, email } = newCompany
 					return (
 						<div key={id}>
+							<h4>{fullname}</h4>
 							<h4>{company}</h4>
 							<h4>{email}</h4>
 							<h4>{phone}</h4>
