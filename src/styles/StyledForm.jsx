@@ -1,18 +1,21 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const StyledForm = styled.form`
 	width: min(100%, 327px);
 	min-height: 465px;
 	box-sizing: border-box;
-	padding: 30px 40px;
-	background-color: salmon;
+	padding: 1.5rem;
+	background-color: var(--white-1);
 	border-radius: 10px;
 	display: grid;
-	gap: 10px;
+	gap: 1rem;
 	margin: 0 auto;
 	.form-group {
+		width: 100%;
+		height: 45px;
+		padding-inline: 0.5rem;
 		display: grid;
-		gap: 5px;
+		gap: 0.2rem;
 	}
 	label {
 		font-size: 12px;
@@ -22,13 +25,14 @@ const StyledForm = styled.form`
 	select {
 		padding: 10px;
 		margin: 10px 0;
-		border: 2px solid #f4fff4;
-		border-radius: 5px;
+		border: none;
+		border-bottom: 1px solid var(--grey);
+
 		outline: none;
 	}
 	input:invalid[focused='true'],
 	select:invalid[focused='true'] {
-		border: 3px solid red;
+		border-bottom: 3px solid red;
 	}
 	input:invalid[focused='true'] ~ .error,
 	select:invalid[focused='true'] ~ .error {
@@ -44,9 +48,8 @@ const StyledForm = styled.form`
 	.submit {
 		width: 100%;
 		font-size: 18px;
-		margin-top: 15px;
-		margin-bottom: 30px;
-		padding: 12px 24px;
+		padding: 0.75rem 1.5rem;
+		margin-block: 1.5rem;
 		color: #fff;
 		background-color: #f46c5d;
 		border: 1px solid #fff;
@@ -55,4 +58,4 @@ const StyledForm = styled.form`
 		cursor: pointer;
 	}
 `
-  export default StyledForm
+export default StyledForm
