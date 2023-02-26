@@ -16,7 +16,7 @@ const Form = () => {
 	const [companies, setCompanies] = useState([])
 	const [error, setError] = useState(false)
 	const [focused, setFocused] = useState(false)
-	
+
 	const navigate = useNavigate()
 
 	const handleFocus = (e) => {
@@ -76,7 +76,8 @@ const Form = () => {
 }
 
 const StyledForm = styled.form`
-	width: min(100%, 300px);
+	width: min(100%, 327px);
+	min-height: 465px;
 	box-sizing: border-box;
 	padding: 30px 40px;
 	background-color: salmon;
