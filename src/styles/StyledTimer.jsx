@@ -24,7 +24,7 @@ const StyledTimer = styled.div`
 			text-transform: uppercase;
 			text-align: center;
 			color: ${({ className }) =>
-				className === 'homePage' ? 'var(--white-1)' : 'var(--black)'};
+				className === 'homePage' ? 'var(--white-1)' : 'var(--lightBlack)'};
 
 			span {
 				color: var(--blue-1);
@@ -48,7 +48,8 @@ const StyledTimer = styled.div`
 		border: none;
 		border-radius: 0.25rem;
 		box-shadow: var(--box-shadow-1);
-		background-color: var(--lightBlack);
+		background-color: ${({ className }) =>
+			className === 'homePage' ? 'var(--lightBlack)' : 'var(--blue-2)'};
 		z-index: 9;
 		@media (min-width: 768px) {
 			width: 100px;
@@ -60,7 +61,8 @@ const StyledTimer = styled.div`
 			font-weight: var(--bold);
 			line-height: 3rem;
 			text-align: center;
-			color: var(--white-1);
+			color: ${({ className }) =>
+				className === 'homePage' ? 'var(--white-1)' : 'var(--blue-1)'};
 			@media (min-width: 768px) {
 				font-size: 3.5rem;
 			}
@@ -71,7 +73,8 @@ const StyledTimer = styled.div`
 			line-height: 1.75rem;
 			text-transform: lowercase;
 			text-align: center;
-			color: var(--white-1);
+			color: ${({ className }) =>
+				className === 'homePage' ? 'var(--white-1)' : 'var(--lightBlack)'};
 			opacity: 0.5;
 
 			@media (min-width: 768px) {
