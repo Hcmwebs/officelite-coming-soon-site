@@ -10,14 +10,25 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 					name='fullname'
 					type='text'
 					placeholder='Name'
-					value={values.name}
+					value={values.fullname}
 					onChange={handleChange}
 					onBlur={handleFocus}
 					focused={focused.toString()}
 					required
 				/>
 				{!error && (
-					<span className='error'>Please enter a valid name </span>
+					<div className='error'>
+						<small>Please enter a valid name</small>
+						<svg width='20' height='20' xmlns='http://www.w3.org/2000/svg'>
+							<g fill='none' fillRule='evenodd'>
+								<circle fill='#F05B5B' cx='10' cy='10' r='10' />
+								<path
+									d='M12.475 6.61l1.414 1.415-2.475 2.475 2.475 2.475-1.414 1.414L10 11.914l-2.475 2.475-1.414-1.414L8.585 10.5 6.11 8.025l1.414-1.414L10 9.085l2.475-2.474z'
+									fill='#FFF'
+								/>
+							</g>
+						</svg>
+					</div>
 				)}
 			</div>
 			<div className='form-group'>

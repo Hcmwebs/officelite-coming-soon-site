@@ -11,8 +11,10 @@ import StyledCard from './StyledCard'
 import StyledTimer from './StyledTimer'
 import StyledPattern from './StyledPattern'
 import StyledForm from './StyledForm'
+import StyledFlex from './StyledFlex'
 export {
 	GlobalStyles,
+	StyledFlex,
 	StyledLogo,
 	StyledContainer,
 	StyledHeader,
@@ -24,5 +26,5 @@ export {
 	StyledFooter,
 	StyledTimer,
 	StyledPattern,
-	StyledForm
+	StyledForm,
 }
