@@ -4,12 +4,29 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 	return (
 		<>
 			<div className='form-group'>
+				<label htmlFor='fullname'>Name : </label>
+				<input
+					id='fullName'
+					name='fullname'
+					type='text'
+					placeholder='Name'
+					value={values.name}
+					onChange={handleChange}
+					onBlur={handleFocus}
+					focused={focused.toString()}
+					required
+				/>
+				{!error && (
+					<span className='error'>Please enter a valid name </span>
+				)}
+			</div>
+			<div className='form-group'>
 				<label htmlFor='email'>Email : </label>
 				<input
 					id='email'
 					name='email'
 					type='email'
-					placeholder='email.email.com'
+					placeholder='Email address'
 					value={values.email}
 					onChange={handleChange}
 					onBlur={handleFocus}
@@ -46,7 +63,7 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 				<input
 					id='phone'
 					name='phone'
-					type='text'
+					type='number'
 					placeholder='+1234566789'
 					value={values.phone}
 					onChange={handleChange}
