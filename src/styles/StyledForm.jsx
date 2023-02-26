@@ -6,28 +6,25 @@ const StyledForm = styled.form`
 	box-sizing: border-box;
 	padding: 1.5rem;
 	background-color: var(--white-1);
-	border-radius: 10px;
+	border-radius: var(--borderRadius-2);
 	display: grid;
-	gap: 1rem;
+	gap: 2rem;
 	margin: 0 auto;
 	.form-group {
 		width: 100%;
 		height: 45px;
-		padding-inline: 0.5rem;
 		display: grid;
-		gap: 0.2rem;
 	}
 	label {
 		font-size: 12px;
-		color: #f4fff4;
+		color: var(--grey);
+		display: none;
 	}
 	input,
 	select {
-		padding: 10px;
-		margin: 10px 0;
+		padding: 0.625rem;
 		border: none;
 		border-bottom: 1px solid var(--grey);
-
 		outline: none;
 	}
 	input:invalid[focused='true'],
@@ -40,21 +37,14 @@ const StyledForm = styled.form`
 	}
 	.error {
 		font-size: 12px;
-		padding: 3px;
-		color: black;
+		padding-inline: 0.625rem;
+		color: red;
 		display: none;
 	}
 
 	.submit {
-		width: 100%;
 		font-size: 18px;
-		padding: 0.75rem 1.5rem;
-		margin-block: 1.5rem;
-		color: #fff;
-		background-color: #f46c5d;
-		border: 1px solid #fff;
-		outline: none;
-		border-radius: 5px;
+		width: 100%;
 		cursor: pointer;
 	}
 `
