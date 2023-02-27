@@ -1,21 +1,19 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { StyledHero } from '../styles'
-import {homeHero} from '../data/Data'
-
+import { homeHero } from '../data/Data'
 
 const HomeHero = () => {
-
-const {title,body} = homeHero
+	const { title, body } = homeHero
 
 	return (
-		<StyledHero className= 'homePage'>
+		<StyledHero className='homePage'>
 			<img
 				src='/illustration-home-charts.svg'
 				alt='illustration Chart'
 				className='heroHeader'
 			/>
-			<div className='heroBody homePage'>
+			<div className='heroBody'>
 				<h1>{title}</h1>
 				<p>{body}</p>
 				<Link to='/signup' className='btn primary'>

@@ -8,7 +8,7 @@ const SignUpHero = () => {
 
 	return (
 		<StyledHero className='signUpPage'>
-			<div className='heroBody signUpPage'>
+			<div className='heroBody'>
 				<h1>{title}</h1>
 				<p>{body}</p>
 				<Timer duration={timerDuration} className='signUpPage' />
