@@ -40,7 +40,7 @@ height: 100%;
 }
 
 body {
-  background: var(--white-2);
+  background: var(--white-1);
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   line-height: 1.75;

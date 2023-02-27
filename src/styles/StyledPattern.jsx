@@ -15,21 +15,25 @@ const StyledPattern = styled.div`
 	}
 
 	&.homePage {
-		top: -20%;
-		@media (min-width: 1440px) {
-			top: -65%;
-			right: -40%;
+		&.footer {
+			top: -20%;
+			@media (min-width: 1440px) {
+				top: -65%;
+				right: -40%;
+			}
 		}
 	}
 
 	&.signUpPage {
-		top: -10%;
-		@media (min-width: 768px) {
-			display: none;
+		&.footer {
+			top: -10%;
+			@media (min-width: 768px) {
+				display: none;
+			}
 		}
 	}
 
-	&.footer {
+	.footer {
 		width: 1202px;
 		height: 1202px;
 		position: absolute;

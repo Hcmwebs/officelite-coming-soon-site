@@ -4,7 +4,6 @@ const StyledFooter = styled.footer`
 	width: 100%;
 	min-height: 30vh;
 	padding-bottom: 2.5rem;
-	padding-top: 48.9rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -24,6 +23,16 @@ const StyledFooter = styled.footer`
 	.btn {
 		z-index: 9;
 	}
+
+	&.homePage{
+		padding-top: 48.9rem;
+	}
+
+	&.signUpPage{
+		padding-top:0rem;
+	}
+
+
 `
 
 export default StyledFooter
