@@ -4,7 +4,7 @@ const FormInputs = ({ values, handleChange, error, focused, handleFocus }) => {
 	return (
 		<>
 			<div className='form-group'>
-				<label htmlFor='fullname'>Name : </label>
+				<label htmlFor='fullname'> Name  </label>
 				<input
 					id='fullName'
 					name='fullname'

@@ -15,9 +15,11 @@ const StyledForm = styled.form`
 		height: 45px;
 		display: grid;
 		position: relative;
+		transition: var(--transition-2);
 	}
 	label {
-		font-size: 12px;
+		font-size: 1rem;
+		line-height: 1.75rem;
 		color: var(--grey);
 		display: none;
 	}
@@ -30,25 +32,22 @@ const StyledForm = styled.form`
 	}
 	input:invalid[focused='true'],
 	select:invalid[focused='true'] {
-		border-bottom: 3px solid red;
+		border-bottom: 1px solid red;
 	}
+
 	input:invalid[focused='true'] ~ .error,
 	select:invalid[focused='true'] ~ .error {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	input:invalid[focused='true'] ~ input::placeholder {
-		color: var(--white-1);
-		opacity: 0;
-	}
 
 	.error {
 		width: 100%;
 		padding-inline: 0.625rem;
 		color: red;
-		/* position: absolute;
-		top: 0.625rem; */
+		position: absolute;
+		top: 3rem;
 		display: none;
 
 		small {
@@ -62,6 +61,7 @@ const StyledForm = styled.form`
 	.submit {
 		font-size: 18px;
 		width: 100%;
+		margin-top: 0.75rem;
 		-webkit-appearance: button;
 		-moz-appearance: button;
 		cursor: pointer;
