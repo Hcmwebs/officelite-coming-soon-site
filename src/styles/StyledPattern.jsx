@@ -40,7 +40,7 @@ const StyledPattern = styled.div`
 				width: 2036px;
 				height: 2036px;
 				display: block;
-				top: -75%;
+				top: -90%;
 				left: -175%;
 			}
 		}
