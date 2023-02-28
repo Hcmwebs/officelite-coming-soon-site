@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledContainer = styled.div`
-	width: min-content(100%, 1440px);
+	width: min(100%, 1440px);
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -10,6 +10,5 @@ const StyledContainer = styled.div`
 	position: relative;
 	overflow: hidden;
 	min-height: 100vh;
-	
 `
 export default StyledContainer
