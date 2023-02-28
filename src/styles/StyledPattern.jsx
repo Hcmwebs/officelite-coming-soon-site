@@ -5,6 +5,7 @@ const StyledPattern = styled.div`
 	width: 458px;
 	height: 458px;
 	left: -10%;
+	top: -15%;
 	@media (min-width: 768px) {
 		width: 666px;
 		height: 666px;
@@ -25,10 +26,22 @@ const StyledPattern = styled.div`
 	}
 
 	&.signUpPage {
+		&.header {
+			@media (min-width: 1440px) {
+				display: none;
+			}
+		}
 		&.footer {
-			top: -10%;
+			top: -15%;
 			@media (min-width: 768px) {
 				display: none;
+			}
+			@media (min-width: 1440px) {
+				width: 2036px;
+				height: 2036px;
+				display: block;
+				top: -75%;
+				left: -175%;
 			}
 		}
 	}

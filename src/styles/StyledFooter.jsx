@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const StyledFooter = styled.footer`
 	width: 100%;
 	min-height: 30vh;
-	padding-bottom: 2.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,7 +10,7 @@ const StyledFooter = styled.footer`
 	gap: 2.5rem;
 	background-color: var(--black);
 	position: relative;
-	overflow: hidden;
+
 	@media (min-width: 768px) {
 		padding-top: 31.63rem;
 	}
@@ -24,15 +23,26 @@ const StyledFooter = styled.footer`
 		z-index: 9;
 	}
 
-	&.homePage{
+	&.homePage {
 		padding-top: 48.9rem;
 	}
 
-	&.signUpPage{
-		padding-top:0rem;
+	&.signUpPage {
+		height: 320px;
+
+		@media (min-width: 768px) {
+			height: 380px;
+		}
+		@media (min-width: 1440px) {
+			min-height: 100vh;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 420px;
+			padding: 0;
+		}
 	}
-
-
 `
 
 export default StyledFooter
