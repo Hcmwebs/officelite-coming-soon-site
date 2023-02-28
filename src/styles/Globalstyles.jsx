@@ -40,15 +40,13 @@ height: 100%;
 }
 
 body {
-  background: var(--white-1);
+  background: var(--white-3);
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: #000000;
   display: grid;
   place-items: center;
-  width: 100vw;
-  min-height: 100vh;
 }
 
 p {margin: 0;}
