@@ -17,7 +17,8 @@ const StyledForm = styled.form`
 	}
 	.form-group {
 		width: 100%;
-		height: 45px;
+		height: 65px;
+		padding-bottom: 1.5rem;
 		display: grid;
 		position: relative;
 		transition: var(--transition-2);
@@ -30,7 +31,7 @@ const StyledForm = styled.form`
 	}
 	input,
 	select {
-		padding: 0.625rem;
+		padding: 0.2rem 1rem;
 		border: none;
 		border-bottom: 1px solid var(--grey);
 		outline: none;
@@ -49,10 +50,11 @@ const StyledForm = styled.form`
 
 	.error {
 		width: 100%;
-		padding-inline: 0.625rem;
+		padding-inline: 1rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		color: red;
-		position: absolute;
-		top: 3rem;
 		display: none;
 
 		small {
@@ -66,7 +68,7 @@ const StyledForm = styled.form`
 	.submit {
 		font-size: 18px;
 		width: 100%;
-		margin-top: 0.75rem;
+		margin-top: 2.5rem;
 		-webkit-appearance: button;
 		-moz-appearance: button;
 		cursor: pointer;
