@@ -63,20 +63,6 @@ const Form = () => {
 				<button className='btn primary submit' type='submit'>
 					Get on the list
 				</button>
-				<div>
-					{companies.map((newCompany) => {
-						const { id, company, phone, pack, email, fullname } = newCompany
-						return (
-							<div key={id}>
-								<h4>{fullname}</h4>
-								<h4>{company}</h4>
-								<h4>{email}</h4>
-								<h4>{phone}</h4>
-								<h4>{pack}</h4>
-							</div>
-						)
-					})}
-				</div>
 			</StyledForm>
 		</>
 	)
