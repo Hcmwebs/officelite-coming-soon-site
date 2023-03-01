@@ -47,6 +47,7 @@ body {
   color: #000000;
   display: grid;
   place-items: center;
+  min-height: 100vh;
 }
 
 p {margin: 0;}
@@ -116,31 +117,21 @@ button{
   &.secondary{
     background-color:var(--blue-2);
     color:var(--blue-1);
-
-    &.pro{
-      background-color:var(--white-1);
-
-      &:hover{
-      background-color:var(--white-1);
-        color:var(--lightBlue);
-      }
-    }
-
     &:hover{
     background-color:var(--blue-3);
     color:var(--blue-1);
     }
   }
-  &.tertiary{
-    background-color:var(--white-1);
-    color:var(--blue-1);
 
-    &:hover{
-    background-color:var(--white-1);
-    color:var(--lightBlue);
+  &.pro{
+    background-color: var(--white-1);
+    color: var(--blue-1);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--lightBlue);
     }
   }
-
 }
 
 .sectionCenter{
