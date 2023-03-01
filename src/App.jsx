@@ -1,12 +1,12 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { SharedLayout, Home, SignUp, Error } from './pages'
-import { GlobalStyles} from './styles'
+import { Globalstyles } from './styles'
 
 const App = () => {
 	return (
 		<>
-			<GlobalStyles />
+			<Globalstyles />
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<SharedLayout />}>

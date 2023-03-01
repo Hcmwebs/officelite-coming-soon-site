@@ -1,4 +1,4 @@
-import GlobalStyles from './GlobalStyles'
+import Globalstyles from './Globalstyles'
 import StyledLogo from './StyledLogo'
 import StyledContainer from './StyledContainer'
 import StyledHeader from './StyledHeader'
@@ -13,7 +13,7 @@ import StyledPattern from './StyledPattern'
 import StyledForm from './StyledForm'
 import StyledFlex from './StyledFlex'
 export {
-	GlobalStyles,
+	Globalstyles,
 	StyledFlex,
 	StyledLogo,
 	StyledContainer,

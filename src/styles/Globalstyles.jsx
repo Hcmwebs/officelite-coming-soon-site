@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyles = createGlobalStyle`
+const Globalstyles = createGlobalStyle`
 
 :root{
   --white-1: rgba(255, 255, 255, 1.0);
@@ -148,4 +148,4 @@ button{
 
 `
 
-export default GlobalStyles
+export default Globalstyles
