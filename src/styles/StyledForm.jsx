@@ -8,8 +8,13 @@ const StyledForm = styled.form`
 	background-color: var(--white-1);
 	border-radius: var(--borderRadius-2);
 	display: grid;
-	gap: 2rem;
+	gap: 1.5rem;
 	margin: 0 auto;
+	@media (min-width: 768px) {
+		width: min(100%, 445px);
+		min-height: 508px;
+		padding: 2.75rem;
+	}
 	.form-group {
 		width: 100%;
 		height: 45px;
