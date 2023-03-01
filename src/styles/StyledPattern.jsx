@@ -17,6 +17,14 @@ const StyledPattern = styled.div`
 	}
 
 	&.homePage {
+		@media (min-width: 768px) {
+			left: 55%;
+			top: -35%;
+		}
+		@media (min-width: 768px) {
+			left: 45%;
+			top: -65%;
+		}
 		&.footer {
 			top: -20%;
 			@media (min-width: 1440px) {
