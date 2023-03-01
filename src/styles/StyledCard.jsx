@@ -29,10 +29,10 @@ const StyledCard = styled.div`
 		flex-direction: column;
 		padding-right: 1.5rem;
 		padding-left: 1.5rem;
-
-		.btn {
-			position: static;
-		}
+	}
+	.btn {
+		position: relative;
+		z-index: 9;
 	}
 
 	h2 {
