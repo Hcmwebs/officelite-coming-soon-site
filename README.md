@@ -67,7 +67,7 @@ Users should be able to:
 
 ### Continued development
 
-My continued progress in learning React is very satisfactory.*
+- My continued progress in learning React is very satisfactory.
 
 ### Useful resources
 
