@@ -17,7 +17,7 @@ export const pricing = [
 		storage: '2 gb storage',
 		perks: 'Great security and support',
 		className: 'basic',
-		btnClassName: 'btn secondary basic',
+		btnClassName: 'btn secondary',
 	},
 	{
 		id: 2,
@@ -39,7 +39,7 @@ export const pricing = [
 		storage: '100 gb storage',
 		perks: 'VIP support',
 		className: 'ultimate',
-		btnClassName: 'btn secondary ultimate',
+		btnClassName: 'btn secondary',
 	},
 ]
 
