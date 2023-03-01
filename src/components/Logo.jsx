@@ -4,13 +4,11 @@ import { StyledLogo } from '../styles'
 
 const Logo = () => {
 	return (
-		<nav>
-			<StyledLogo className='sectionCenter'>
-				<Link to='/'>
-					<img src='/logo.svg' alt='Logo' />
-				</Link>
-			</StyledLogo>
-		</nav>
+		<StyledLogo className='sectionCenter'>
+			<Link to='/'>
+				<img src='/logo.svg' alt='Logo' />
+			</Link>
+		</StyledLogo>
 	)
 }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledLogo = styled.div`
+const StyledLogo = styled.nav`
 	padding-block: 3rem;
 	display: grid;
 	place-items: center;
