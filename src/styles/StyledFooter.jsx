@@ -28,10 +28,10 @@ const StyledFooter = styled.footer`
 	}
 
 	&.signUpPage {
-		min-height: 320px;
+		min-height: 450px;
 
 		@media (min-width: 768px) {
-			min-height: 380px;
+			min-height: 500px;
 		}
 		@media (min-width: 1440px) {
 			min-height: 100vh;
