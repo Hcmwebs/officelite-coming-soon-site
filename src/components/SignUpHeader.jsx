@@ -5,7 +5,7 @@ import { Pattern, SignUpHero } from './index'
 const SignupHeader = () => {
 	return (
 		<StyledHeader className='signUpPage sectionCenter'>
-			<Pattern title='signUpPage' image='/bg-pattern-home-header.svg' />
+			<Pattern title='signUpPage header' image='/bg-pattern-home-header.svg' />
 			<SignUpHero />
 		</StyledHeader>
 	)
