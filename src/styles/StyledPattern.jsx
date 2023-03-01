@@ -33,11 +33,11 @@ const StyledPattern = styled.div`
 			}
 		}
 		&.footer {
-			top: -15%;
+			top: 0%;
 			@media (min-width: 768px) {
 				width: 1454px;
 				height: 1454px;
-				top: -135%;
+				top: -150%;
 				left: -45%;
 			}
 			@media (min-width: 1440px) {
