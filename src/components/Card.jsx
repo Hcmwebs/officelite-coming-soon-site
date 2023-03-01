@@ -27,7 +27,7 @@ const Card = ({
 					<p>{perks}</p>
 				</div>
 			</div>
-			<Link to='/signup' className={`${btnClassName} btn secondary`}>
+			<Link to='/signup' className={btnClassName}>
 				Try for Free
 			</Link>
 		</StyledCard>
