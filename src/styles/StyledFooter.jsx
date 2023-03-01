@@ -11,27 +11,27 @@ const StyledFooter = styled.footer`
 	background-color: var(--black);
 	position: relative;
 
-	@media (min-width: 768px) {
-		padding-top: 31.63rem;
-	}
-	@media (min-width: 1440px) {
-		padding-top: 15.63rem;
-		justify-content: space-between;
-		flex-direction: row;
-	}
 	.btn {
 		z-index: 9;
 	}
 
 	&.homePage {
 		padding-top: 48.9rem;
+		@media (min-width: 768px) {
+			padding-top: 31.63rem;
+		}
+		@media (min-width: 1440px) {
+			padding-top: 15.63rem;
+			justify-content: space-between;
+			flex-direction: row;
+		}
 	}
 
 	&.signUpPage {
-		height: 320px;
+		min-height: 320px;
 
 		@media (min-width: 768px) {
-			height: 380px;
+			min-height: 380px;
 		}
 		@media (min-width: 1440px) {
 			min-height: 100vh;

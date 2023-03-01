@@ -9,6 +9,7 @@ const StyledContainer = styled.div`
 	flex-direction: column;
 	position: relative;
 	overflow: hidden;
+	background-color: var(--white-3);
 	min-height: 100vh;
 `
 export default StyledContainer

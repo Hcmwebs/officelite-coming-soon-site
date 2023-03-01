@@ -40,7 +40,7 @@ height: 100%;
 }
 
 body {
-  background: var(--white-3);
+  background: var(--white-2);
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 400;
   line-height: 1.75;
@@ -79,6 +79,8 @@ img, picture, svg {
 }
 a{
   text-decoration: none;
+  cursor: pointer;
+
 }
 
 button{
@@ -97,6 +99,7 @@ button{
   place-items: center;
   border:none;
   outline: none;
+  cursor: pointer;
   box-shadow: var(--boxShadow-1);
   transition: var(--transition-1);
 

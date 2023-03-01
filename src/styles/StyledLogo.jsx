@@ -6,7 +6,7 @@ const StyledLogo = styled.div`
 	place-items: center;
 
 	@media (min-width: 768px) {
-		justify-self: start;
+		align-self: start;
 	}
 `
 export default StyledLogo
