@@ -39,11 +39,10 @@ Users should be able to:
 ![SignUpPage-Tablet](/public/screenshots/SignUpTablet.png)
 ![SignUpPage-Desktop](/public/screenshots/SignUpDesktop.png)
 
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/solution-with-react-vitejs-styled-components-and-react-router-GdqQxm5xb8)
+- [Live Site URL](https://officelite-coming-soon-site-hcmwebs.vercel.app/)
 
 ## My process
 
@@ -58,12 +57,11 @@ Users should be able to:
 - [React-router-dom](https://reactrouter.com/) - smooth switch from page to page
 - [Styled Components](https://styled-components.com/) - For styles
 
-
 ### What I learned
+
 - learnt about react-router.
 - more and more of styled-components
 - and more REACT.
-
 
 ### Continued development
 
